@@ -1,0 +1,28 @@
+.logo
+   img
+      display: block
+      width: 198px
+      height: 41px
+      
+.contact-block
+   display: flex
+   justify-content: center
+   align-items: center
+   padding: 0 20px
+   &__item
+      display: flex
+      flex: 0 1 33.33333%
+      &-icon-wrap
+         flex: 0 0 25px
+         margin-right: 10px
+         border-right: 1px solid rgba($color-1, .6)
+      &-icon
+         &_loc
+            +sprite('loc')
+         &_tel
+            +sprite('tel')
+         &_clock
+            +sprite('clock')
+      &-text
+         font-size: 13px
+         color: $color-4

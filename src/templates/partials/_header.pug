@@ -1,0 +1,49 @@
+//BEGIN header
++b.HEADER.header(class= headerClass)
+	+e.line
+		+e.line-container.container
+			p Кухонный гарнитур по индивидуальному дизайн проекту, точно в размер Вашего помещения. Доставка и установка по РМЭ бесплатно! От 20 т.р. п/м.
+	+e.info
+		+e.info-container.container
+			+b.A.logo(href='#!').header__logo
+				+e.IMG(src='img/other/logo.jpg' alt='img')
+			+b.contact-block.header__contact
+				+e.item
+					+e.item-icon-wrap
+						+e.item-icon._loc
+					+e.P.item-text ТЦ Форум, цокольный этаж
+
+				+e.item
+					+e.item-icon-wrap
+						+e.item-icon._clock
+					+e.P.item-text с 10:00 До 20:00, без выходных
+
+				+e.item
+					+e.item-icon-wrap
+						+e.item-icon._tel
+					+e.A.item-text(href='tel:+78362398639') +7 (8362) 39 - 86 - 39
+
+			+e.BUTTON.call-btn.btn._blue._md(type='button') Заказать звонок
+
+	+e.NAV.nav
+		+e.nav-container.container
+			-
+				navList = [
+				'КАТАЛОГ',
+				'РОЗЫГРЫШ СЕРТИФИКАТА',
+				'ЗАМЕР',
+				'НАША КОМАНДА',
+				'ОТЗЫВЫ',
+				'РАССРОЧКА',
+				'ГАРНИТУРЫ',
+				'КОНТАКТЫ'
+				]
+			+e.UL.nav-list
+				for navLink, i in navList
+					li: a(href='#!')= navLink
+
+			//+e.BUTTON.nav-btn(type='button')
+			//	+e.nav-btn-burger
+			//		+e.nav-btn-lines
+
+//END header

@@ -1,0 +1,93 @@
+body
+   min-width: 320px
+   -webkit-font-smoothing: antialiased
+   -moz-osx-font-smoothing: grayscale
+   +f('os400', 16, 24)
+   color: $black
+   &.is-locked
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      height: 0
+      overflow: hidden
+.out
+   overflow: hidden
+   
+.container
+   max-width: 1200px
+   margin: 0 auto
+   padding: 0 15px
+   
+.row
+   display: flex
+   flex-wrap: wrap
+   margin: 0 -15px
+   +md
+      justify-content: center
+      margin: 0 -10px
+   +sm
+      flex-direction: column
+      
+.col
+   flex: 0 1 25%
+   padding: 0 15px
+   .is-ie &
+      max-width: 292px
+   +md
+      padding: 0 10px
+      flex: 0 1 33.33333%
+   +sm
+      flex: 1 1 auto
+   &:nth-child(1) ~ &
+      +sm
+         padding: 30px 15px 0
+   &:nth-child(4) ~ &
+      padding: 30px 15px 0
+   &:nth-child(3) ~ &
+      +md
+         padding: 20px 10px 0
+      
+.section
+   padding: 65px 0 80px
+   +sm
+      padding: 50px 0 60px
+
+.out
+   overflow: hidden
+
+.title
+   +f('os800', 34, 46)
+   text-transform: uppercase
+   text-align: center
+   span
+      color: #0057ae
+.title-md
+   @extend .title
+   font-size: 20px
+
+.btn
+   display: inline-block
+   outline: 0
+   text-align: center
+   +f('os600', null, 20)
+   background: $color-1
+   border-radius: 21px
+   +trs
+   &_md
+      padding: 11px 36px
+      font-size: 15px
+   &_lg
+      min-width: 370px
+      padding: 16px 30px
+      font-size: 18px
+      border-radius: 27px
+   &_blue
+      color: $white
+      background: $color-1
+      
+      &:hover
+   &_black
+      color: $black
+      border-color: $black
+      &:hover

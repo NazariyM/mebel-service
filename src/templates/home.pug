@@ -1,0 +1,153 @@
+extends layouts/_layout
+
+block variables
+	-title = 'Главная'
+
+block content
+
+	+b.main
+		//begin screen
+		//+b.SECTION.screen
+		//	+e.inner
+				+e.slider
+		//end screen
+
+		//begin benefits
+		+b.SECTION.benefits
+			+e.container.container
+				+e.H2.title.title Преимущества работы с нами
+				+e.row.row
+					-
+						benefitsList = [{
+							title: 'ЛУЧШИЕ ЦЕНЫ НА РЫНке',
+							descr: 'Производим от Премиум до Эконом класса. Без наценки магазина, напрямую с производства. Сэкономь до 20% от рыночных цен.'
+						}, {
+							title: 'Наивысшее качество',
+							descr: 'Средний стаж каждого сотрудника компании «МебельСервис», более 10 лет в индустрии мебели. Все сотрудники получают оплату, только после 100% сдачи заказа.'
+						}, {
+							descr: 'Без участия банка,  без справок, оформление по одному документу. Возможно оформление кредита, через банк, сроком до 3-х лет.'
+						}, {
+							title: 'ОПЛАТА ЛЮБЫМ УДОБНЫМ СПОСОБОМ',
+							descr: 'Наличный расчет, банковская карта, оплата на расчетный счет компании при работе с юр. лицами.'
+						}, {
+							title: 'ТЕХНИКА В ПОДАРОК',
+							descr: 'При покупке кухни, Вœœœы получаете технику в подарок.'
+						}, {
+							title: '10 лет гарантии от производителя',
+							descr: 'Послегарантийное обслуживание, прописывается в договоре.'
+						}]
+
+					mixin benefitsItem(item, i)
+						+e.item
+							+e.item-icon-wrap
+								+e.item-icon(class=`_${i + 1}`)
+							if i === 2
+								+e.H5.item-title РАссрочка
+									span 0%
+									= ' '
+									| на 6 месяцев
+							else
+								+e.H5.item-title= item.title
+
+							+e.P.item-descr= item.descr
+
+					each item, i in benefitsList
+						+benefitsItem(item, i)
+
+				+e.A.more-btn.btn._blue._lg(href='#!') Узнать подробнее
+		//end benefits
+
+		//begin team-poster
+		+b.SECTION.team-poster
+			+e.container.container
+				+e.block
+					+e.top-text
+						+e.H2.title.title ПРОфессиональная и сильная команда
+						+e.H5.sub-title.title-md работающая над воплощением кухни вашей мечты
+					+e.img-wrap
+						+e.IMG.img(src='img/content/team-poster_img.jpg' alt='image')
+					+e.bot-text
+						+e.H6.sub-title.title-md ЕСЛИ ВЫ ХОТИТЕ РАБОТАТЬ В НАШЕЙ КОМАНДЕ
+						+e.P.descr Оставьте свои данные и мы свяжемся с Вами в ближайшее время.
+						+e.A.btn.btn._blue._lg(href='#!') Оставить данные
+		//end team-poster
+
+		//begin steps
+		+b.SECTION.steps
+			+e.container.container
+				+e.H2.title.title от новенькой и стильной кухни вас отделяет всего 6 шагов
+				+e.row.row
+					-
+						stepsList = [
+						[['КОНСУЛЬТАЦИЯ СО СПЕЦИАЛИСТОМ'], ['После разговора по телефону с нашим менеджером, Вы получите всю информацию о Кухнях, какие материалы существуют, на чем можно сэкономить, на чем КАТЕГОРИЧЕСКИ нельзя экономить, какая бывает фурнитура и срок её службы. Это займет не более 1 мин. Просто оставьте заявку на сайте или позвоните по телефону.']],
+						[['выезд дизайнера в помещение'], ['Дизайнер, выезжая на замер, посмотрит существующий интерьер, попросит вас ответить на пару вопросов, узнает о ваших предпочтениях, бюджете, целях. Сделает предварительный замер вашего помещения. И уже изучив всю информацию о Вас, сможет предоставить варианты эскизов Вашей мебели.']],
+						[['Презентация 3D-эскизов (3 варианта)'], ['Вы приезжаете к нам в офис на бесплатном такси. Из 3 вариантов выбираете самый подходящий для вас по дизайну и бюджету, и если нужно вносите поправки и пожелания. Изучаете прозрачную смету из чего состоит Ваша кухня.']],
+						[['производство кухни'], ['После контрольного замера и выдачи чертежей конструктором. Ваш кухонный гарнитур попадает на производство нашей компании, оснащенное высокотехнологичный станочным парком и профессиональными сборщиками.']],
+						[['упаковка и доставка'], ['Каждый элемент Вашей кухни, будет упакован в гофрокартон и стрейч пленку. В компании МебельСервис, свой автопарк. Поэтому мы сами отвечаем за перевозку мебели. Как бы далеко непришлось везти Вашу мебели, она доедет в целости и сохранности.']],
+						[['сборка гарнитура'], ['Собираем гарнитур. Обрабатываем швы мебели профессиональным герметиком. Подгоняем кухню по размерам комнаты до миллиметров. Убираем весь мусор, оставляем вам чистый и новенький гарнитур.']]
+						]
+					for stepsItem, i in stepsList
+						+e.item
+							+e.item-icon-wrap
+								+e.item-icon(class= `_${i + 1}`)
+							+e.item-text
+								+e.H6.item-title= stepsItem[0]
+								+e.P.item-descr= stepsItem[1]
+		//end steps
+
+		//begin request
+		+b.SECTION.request(style='background-image: url(img/bg/request_bg.png)')
+			+e.container.container
+				+e.FORM.form(action='#!' method='POST')
+					+e.H3.form-title.title ОСТАВЬТЕ ЗАЯВКУ НА БЕСПЛАТНОЕ ТАКСИ ДО «МЕБЕЛЬсервис»
+					+b.form-field.request__form-field
+						+e.LABEL.label
+							span Ваше Имя
+							+e.INPUT.input(type='text' name='' placeholder='Например: Мария' required)
+					+b.form-field.request__form-field
+						+e.LABEL.label
+							span Ваш номер телефона
+							+e.INPUT.input.js-tel-input(type='text' name='' placeholder='+7 (---) --- -- --' required)
+					+e.form-send
+						+e.BUTTON.form-send-btn.btn._blue._lg(type='button') Отправить заявку
+						+e.P.form-text Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"
+		//end request
+
+		//begin anket
+		+b.SECTION.anket
+			+e.container.container
+				+e.block
+					+e.block-top-text
+						+e.H2.title.title индивидуальная рассрочка под
+							span 0%
+						+e.H4.sub-title.title-md от компании мебель макс. без участия банка, без справок
+					+e.block-inner
+						+e.FORM.form(action='#!' method='POST')
+							+e.form-text
+								+e.H4.form-title.title-md заполните короткую анкету
+								+e.P.form-descr И уже в следующем месяце наслаждайтесь приготовление блюд на новенькой кухне!
+							+e.form-row.row
+								+b.form-field.anket__form-field
+									+e.LABEL.label
+										span Ваше Имя
+										+e.INPUT.input(type='text' name='' placeholder='Например: Мария' required)
+								+b.form-field.anket__form-field
+									+e.LABEL.label
+										span рассчитываем бюджет на кухню
+										+e.INPUT.input.js-tel-input(type='text' name='' placeholder='Например: 50.000' required)
+							+e.form-row.row
+								+b.form-field.anket__form-field
+									+e.LABEL.label
+										span Ваш номер телефона
+										+e.INPUT.input.js-tel-input(type='text' name='' placeholder='+7(---) --- -- --' required)
+								+b.form-field.anket__form-field
+									+e.LABEL.label
+										span желаемый ежемесячный платеж
+										+e.INPUT.input(type='text' name='' placeholder='Например: 10.000' required)
+						+e.form-send
+							+e.BUTTON.form-send-btn.btn._blue._lg(type='button') Рассчитать
+							+e.P.form-send-text Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"
+
+			+e.bg._l(style='background-image: url(img/bg/anket_bg_l.png)')
+			+e.bg._r(style='background-image: url(img/bg/anket_bg_r.png)')
+		//end anket

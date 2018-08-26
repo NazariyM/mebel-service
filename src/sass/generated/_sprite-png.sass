@@ -1,0 +1,191 @@
+$icons: (0:0)
+$icons: map-merge($icons,('3d-modeling': (X: -78px, Y:-280px, W: 28px, H: 28px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('arr-dotted': (X: -111px, Y:-224px, W: 69px, H: 20px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('clock': (X: -345px, Y:-42px, W: 20px, H: 20px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('credit-card': (X: -72px, Y:-155px, W: 64px, H: 53px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('facebook': (X: -282px, Y:-153px, W: 46px, H: 46px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('guarantee': (X: -282px, Y:-74px, W: 47px, H: 69px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('kitchen': (X: 0px, Y:-319px, W: 26px, H: 26px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('list': (X: -345px, Y:0px, W: 24px, H: 32px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('loc': (X: -345px, Y:-72px, W: 17px, H: 21px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('manufacturing': (X: 0px, Y:-280px, W: 29px, H: 29px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('money': (X: 0px, Y:-155px, W: 62px, H: 59px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('operator': (X: -39px, Y:-280px, W: 29px, H: 29px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('pig-money': (X: -197px, Y:0px, W: 75px, H: 71px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('promo-zero': (X: 0px, Y:0px, W: 187px, H: 145px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('shipped': (X: -116px, Y:-280px, W: 35px, H: 22px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('stove': (X: -282px, Y:0px, W: 53px, H: 64px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('team': (X: -197px, Y:-81px, W: 72px, H: 53px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('tel-btn': (X: -56px, Y:-224px, W: 45px, H: 45px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('tel': (X: -345px, Y:-103px, W: 13px, H: 23px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('telegram': (X: -202px, Y:-155px, W: 46px, H: 46px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('viber': (X: 0px, Y:-224px, W: 46px, H: 46px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('whatsapp': (X: -146px, Y:-155px, W: 46px, H: 46px, TW: 369px, TH: 345px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)  
+
+//
+//.icon-3d-modeling
+//  width: 28px
+//  height: 28px
+//  background-image: url('../img/sprite.png')
+//  background-position: -78px -280px
+//
+//.icon-arr-dotted
+//  width: 69px
+//  height: 20px
+//  background-image: url('../img/sprite.png')
+//  background-position: -111px -224px
+//
+//.icon-clock
+//  width: 20px
+//  height: 20px
+//  background-image: url('../img/sprite.png')
+//  background-position: -345px -42px
+//
+//.icon-credit-card
+//  width: 64px
+//  height: 53px
+//  background-image: url('../img/sprite.png')
+//  background-position: -72px -155px
+//
+//.icon-facebook
+//  width: 46px
+//  height: 46px
+//  background-image: url('../img/sprite.png')
+//  background-position: -282px -153px
+//
+//.icon-guarantee
+//  width: 47px
+//  height: 69px
+//  background-image: url('../img/sprite.png')
+//  background-position: -282px -74px
+//
+//.icon-kitchen
+//  width: 26px
+//  height: 26px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -319px
+//
+//.icon-list
+//  width: 24px
+//  height: 32px
+//  background-image: url('../img/sprite.png')
+//  background-position: -345px 0px
+//
+//.icon-loc
+//  width: 17px
+//  height: 21px
+//  background-image: url('../img/sprite.png')
+//  background-position: -345px -72px
+//
+//.icon-manufacturing
+//  width: 29px
+//  height: 29px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -280px
+//
+//.icon-money
+//  width: 62px
+//  height: 59px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -155px
+//
+//.icon-operator
+//  width: 29px
+//  height: 29px
+//  background-image: url('../img/sprite.png')
+//  background-position: -39px -280px
+//
+//.icon-pig-money
+//  width: 75px
+//  height: 71px
+//  background-image: url('../img/sprite.png')
+//  background-position: -197px 0px
+//
+//.icon-promo-zero
+//  width: 187px
+//  height: 145px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//
+//.icon-shipped
+//  width: 35px
+//  height: 22px
+//  background-image: url('../img/sprite.png')
+//  background-position: -116px -280px
+//
+//.icon-stove
+//  width: 53px
+//  height: 64px
+//  background-image: url('../img/sprite.png')
+//  background-position: -282px 0px
+//
+//.icon-team
+//  width: 72px
+//  height: 53px
+//  background-image: url('../img/sprite.png')
+//  background-position: -197px -81px
+//
+//.icon-tel-btn
+//  width: 45px
+//  height: 45px
+//  background-image: url('../img/sprite.png')
+//  background-position: -56px -224px
+//
+//.icon-tel
+//  width: 13px
+//  height: 23px
+//  background-image: url('../img/sprite.png')
+//  background-position: -345px -103px
+//
+//.icon-telegram
+//  width: 46px
+//  height: 46px
+//  background-image: url('../img/sprite.png')
+//  background-position: -202px -155px
+//
+//.icon-viber
+//  width: 46px
+//  height: 46px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -224px
+//
+//.icon-whatsapp
+//  width: 46px
+//  height: 46px
+//  background-image: url('../img/sprite.png')
+//  background-position: -146px -155px
+//

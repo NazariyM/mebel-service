@@ -1,0 +1,39 @@
+//fonts
+=font($alias, $name)
+	@font-face
+		font-family: $alias
+		src: url("../fonts/" + $name + ".eot")
+		src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../fonts/" + $name + ".woff") format("woff"), url("../fonts/" + $name + ".woff2") format("woff2"), url("../fonts/" + $name + ".ttf") format("truetype")
+		font-weight: normal
+		font-style: normal
+
++font('OpenSans', 'OpenSans')
++font('OpenSans-Semibold', 'OpenSans-Semibold')
++font('OpenSans-Light', 'OpenSans-Light')
++font('OpenSans-Italic', 'OpenSans-Italic')
++font('OpenSans-Extrabold', 'OpenSans-Extrabold')
++font('OpenSans-Bold', 'OpenSans-Bold')
+
+=f($name, $font-size: null, $line-height: null, $letter-spacing: null)
+	$font-family: null
+	@if $name == "os400"
+		$font-family: "OpenSans"
+	@if $name == "os600"
+		$font-family: "OpenSans-Semibold"
+	@if $name == "os300"
+		$font-family: "OpenSans"
+	@if $name == "os400i"
+		$font-family: "OpenSans-Italic"
+	@if $name == "os800"
+		$font-family: "OpenSans-Extrabold"
+	@if $name == "os700"
+		$font-family: "OpenSans-Bold"
+	font-family: $font-family, Arial, sans-serif
+	@if $font-family != null
+		font-weight: normal
+	@if $font-size != null
+		font-size: $font-size * 1px
+	@if $line-height != null
+		line-height: $line-height * 1px
+	@if $letter-spacing != null
+		letter-spacing: ($letter-spacing / 1000) * 1em

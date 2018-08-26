@@ -1,0 +1,235 @@
+.screen
+   display: none
+   padding: 25px 0 0
+   border-top: 1px solid $color-11
+   &__slider
+      &-img
+         +cover
+      &-item
+      &-title
+      &-descr
+      &-btn
+
+.benefits
+   padding: 60px 0
+   text-align: center
+   &__title
+      margin-bottom: 35px
+   &__row
+      padding-bottom: 30px
+   &__item
+      flex: 0 1 33.33333%
+      padding: 0 15px
+      &:nth-child(3) ~ &
+         padding: 30px 15px 0
+      &-icon
+         margin: 0 auto
+         &-wrap
+            margin-bottom: 15px
+         &_1
+            +sprite('pig-money')
+         &_2
+            +sprite('team')
+         &_3
+            +sprite('money')
+         &_4
+            +sprite('credit-card')
+         &_5
+            +sprite('stove')
+         &_6
+            +sprite('guarantee')
+      &-title
+         margin-bottom: 15px
+         +f('os700', 14, 32)
+         text-transform: uppercase
+         span
+            color: #0057ae
+      &-descr
+         color: $color-2
+         font-size: 14px
+         line-height: 20px
+         
+.team-poster
+   padding: 40px 0
+   text-align: center
+   background: rgba($color-4, .6)
+   &__container
+   &__block
+      padding: 30px 22px
+      box-shadow: 0 0 13px 2px rgba(0, 0, 0, 0.2)
+      background: $white
+   &__title
+   &__sub-title
+   &__img
+      +coverdiv
+      +cover
+      &-wrap
+         margin: 20px 0
+         +cover-img
+         +ratio(1127, 591)
+   &__bot-text
+   &__descr
+      margin-bottom: 10px
+      color: $color-2
+      font-size: 16px
+      line-height: 20px
+
+.steps
+   padding: 60px 0
+   &__row
+      align-items: flex-start
+   &__title
+      max-width: 700px
+      margin: 0 auto 30px
+      line-height: 49px
+   &__item
+      position: relative
+      flex: 0 1 33.33333%
+      padding: 0 15px
+      height: 367px
+      background: url("../img/bg/steps-item_bg.png") no-repeat 50% 50% / 367px 234px
+      +vertical
+      text-align: left
+      &:nth-child(3) ~ &
+         margin-top: 30px
+      &:not(:nth-child(3n))::after
+         position: absolute
+         top: 0
+         right: 0
+         +sprite('arr-dotted')
+         content: ''
+      &-icon
+         position: relative
+         z-index: 1
+         display: inline-block
+         vertical-align: middle
+         &-wrap
+            position: absolute
+            top: 0
+            left: 0
+            width: 68px
+            height: 68px
+            box-shadow: 5px 5px 13px 2px rgba(0, 0, 0, 0.15)
+            background-color: $white
+            border-radius: 50%
+            +vertical
+            &::after
+               +vcenter
+               width: 54px
+               height: 54px
+               box-shadow: 5px 5px 9px 1px rgba(0, 0, 0, 0.13)
+               background-color: #0057ae
+               border-radius: 50%
+               content: ''
+         &_1
+            +sprite('operator')
+         &_2
+            +sprite('list')
+         &_3
+            +sprite('3d-modeling')
+         &_4
+            +sprite('manufacturing')
+         &_5
+            +sprite('shipped')
+         &_6
+            +sprite('kitchen')
+      &-text
+         display: inline-block
+         vertical-align: middle
+         padding: 0 40px
+      &-title
+         margin-bottom: 10px
+         text-transform: uppercase
+         +f('os700', 13, 14)
+      &-descr
+         font-size: 12px
+         line-height: 16.53px
+
+.request
+   padding: 0 0 88px
+   +cover
+   &__form
+      max-width: 398px
+      padding: 20px 15px
+      background: $white
+      box-shadow: 0 0 13px 2px rgba(0, 0, 0, 0.2)
+      &-title
+         margin-bottom: 15px
+         padding-bottom: 10px
+         line-height: 34px
+         font-size: 22px
+         text-align: left
+         border-bottom: 1px solid rgba($color-1, .3)
+      &-row
+      
+      &-field
+         padding: 0 25px
+      &-send
+         text-align: center
+         &-btn
+            margin-bottom: 10px
+            width: 100%
+            min-width: 0
+      &-text
+         color: $color-2
+         font-size: 11px
+         line-height: 16px
+      
+.anket
+   position: relative
+   padding: 60px 0
+   &__block
+      position: relative
+      max-width: 830px
+      margin: 0 auto
+      padding: 30px 50px
+      border: 6px solid rgba($color-2, .4)
+      background: $white
+      z-index: 1
+      &::after
+         position: absolute
+         bottom: 0
+         right: 0
+         z-index: 1
+         +sprite('promo-zero')
+         content: ''
+      &-inner
+         padding: 40px
+         box-shadow: 0 0 13px 2px rgba(0, 0, 0, 0.2)
+      &-top-text
+         margin-bottom: 30px
+   &__form
+      &-text
+         margin-bottom: 30px
+         padding-bottom: 15px
+         border-bottom: 1px solid rgba($color-1, .3)
+         text-align: center
+      &-row
+         margin: 0 -25px 25px
+      &-field
+         flex: 0 1 50%
+         padding: 0 25px
+      &-send
+         max-width: 340px
+         margin: 0 auto
+         text-align: center
+         &-btn
+            margin-bottom: 20px
+            min-width: 338px
+         &-text
+            font-size: 11px
+            line-height: 13px
+            color: $color-2
+         
+   &__bg
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      &_l
+         left: 0
+         width: 409px
+         height: 536px
+      &_r
+         right: 0
+         width: 407px
+         height: 544px

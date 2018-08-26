@@ -1,0 +1,20 @@
+@import ../helpers/all
+
+.form-field
+   &__input
+      width: 100%
+      height: 53px
+      padding: 0 22px
+      border-radius: 4px
+      border: 1px solid #d9d9d9
+      background-color: $white
+      color: $black
+      transition: all .4s cubic-bezier(.19,1,.22,1)
+      +f('os400', 17, 53)
+      +placeholder-color(#949494)
+   &__label
+      +f('os700', 16, 16)
+      text-transform: uppercase
+      span
+         display: block
+         margin-bottom: 10px
