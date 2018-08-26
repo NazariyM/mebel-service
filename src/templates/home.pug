@@ -108,9 +108,9 @@ block content
 						+e.LABEL.label
 							span Ваш номер телефона
 							+e.INPUT.input.js-tel-input(type='text' name='' placeholder='+7 (---) --- -- --' required)
-					+e.form-send
-						+e.BUTTON.form-send-btn.btn._blue._lg(type='button') Отправить заявку
-						+e.P.form-text Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"
+					+b.form-send.request__form-send
+						+e.INPUT.btn.btn._blue._lg(type='submit' value='Получить видео')
+						+e.P.text Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"
 		//end request
 
 		//begin anket
@@ -144,10 +144,44 @@ block content
 									+e.LABEL.label
 										span желаемый ежемесячный платеж
 										+e.INPUT.input(type='text' name='' placeholder='Например: 10.000' required)
-						+e.form-send
-							+e.BUTTON.form-send-btn.btn._blue._lg(type='button') Рассчитать
-							+e.P.form-send-text Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"
+						+b.form-send.anket__form-send
+							+e.INPUT.btn.btn._blue._lg(type='submit' value='Получить видео')
+							+e.P.text Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"
 
 			+e.bg._l(style='background-image: url(img/bg/anket_bg_l.png)')
 			+e.bg._r(style='background-image: url(img/bg/anket_bg_r.png)')
 		//end anket
+
+		//begin promo
+		+b.SECTION.promo(style='background-image: url(img/bg/promo_bg.jpg)')
+			+e.container.container
+				+e.video-block
+					+e.top-text
+						+e.H2.title.title ЛУЧШИЕ ДИЗАЙНЕРСКИЕ РЕШЕНИЯ
+						+e.H5.sub-title.title-md ОТ МЕБЕЛЬСЕРВИС, каталог с любовью
+					+e.P.descr Бесплатный каталог + видео
+						br
+						| ˝10 Ошибок при покупке кухонного гарнитура˝
+					+e.video-wrap
+						+e.video-text
+							+e.UL
+								li Заполни форму
+								li Получи ссылку
+								li Изучай каталог
+								li Смотри видео
+						iframe(width='560' height='315' src='https://www.youtube.com/embed/r5SeqDeSsGY?rel=0&controls=0&showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen='')
+				+b.get-video.promo__get-video
+					+e.top
+						+e.H4.title.title-md скачайте каталог + видео
+						+e.P.descr Начните выбор кухонного гарнитура, не выходя из дома, получив бесплатный каталог.
+						+e.img-wrap
+							+e.IMG(src='img/content/journal_img.png' alt='image')
+					+e.FORM.form(action='#!' method='POST')
+						+b.form-field.get-video__form-field
+							+e.LABEL.label
+								span Ваш номер телефона
+								+e.INPUT.input.js-tel-input(type='text' name='' placeholder='+7(---) --- -- --' required)
+						+b.form-send.promo__form-send
+							+e.INPUT.btn.btn._blue._lg(type='submit' value='Получить видео')
+							+e.P.text Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"
+		//end promo

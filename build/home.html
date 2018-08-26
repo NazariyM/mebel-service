@@ -241,9 +241,9 @@
                   <input class="form-field__input js-tel-input" type="text" name="" placeholder="+7 (---) --- -- --" required="required" />
                 </label>
               </div>
-              <div class="request__form-send">
-                <button class="request__form-send-btn btn btn_blue btn_lg" type="button">Отправить заявку</button>
-                <p class="request__form-text">Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"</p>
+              <div class="form-send request__form-send">
+                <input class="form-send__btn btn btn_blue btn_lg" type="submit" value="Получить видео" />
+                <p class="form-send__text">Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"</p>
               </div>
             </form>
           </div>
@@ -294,9 +294,9 @@
                     </div>
                   </div>
                 </form>
-                <div class="anket__form-send">
-                  <button class="anket__form-send-btn btn btn_blue btn_lg" type="button">Рассчитать</button>
-                  <p class="anket__form-send-text">Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"</p>
+                <div class="form-send anket__form-send">
+                  <input class="form-send__btn btn btn_blue btn_lg" type="submit" value="Получить видео" />
+                  <p class="form-send__text">Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"</p>
                 </div>
               </div>
             </div>
@@ -305,6 +305,52 @@
           <div class="anket__bg anket__bg_r" style="background-image: url(img/bg/anket_bg_r.png)"></div>
         </section>
         <!--end anket-->
+        <!--begin promo-->
+        <section class="promo" style="background-image: url(img/bg/promo_bg.jpg)">
+          <div class="promo__container container">
+            <div class="promo__video-block">
+              <div class="promo__top-text">
+                <h2 class="promo__title title">ЛУЧШИЕ ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h2>
+                <h5 class="promo__sub-title title-md">ОТ МЕБЕЛЬСЕРВИС, каталог с любовью</h5>
+              </div>
+              <p class="promo__descr">Бесплатный каталог + видео
+                <br>˝10 Ошибок при покупке кухонного гарнитура˝</p>
+              <div class="promo__video-wrap">
+                <div class="promo__video-text">
+                  <ul>
+                    <li>Заполни форму</li>
+                    <li>Получи ссылку</li>
+                    <li>Изучай каталог</li>
+                    <li>Смотри видео</li>
+                  </ul>
+                </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/r5SeqDeSsGY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+              </div>
+            </div>
+            <div class="get-video promo__get-video">
+              <div class="get-video__top">
+                <h4 class="get-video__title title-md">скачайте каталог + видео</h4>
+                <p class="get-video__descr">Начните выбор кухонного гарнитура, не выходя из дома, получив бесплатный каталог.</p>
+                <div class="get-video__img-wrap">
+                  <img src="img/content/journal_img.png" alt="image" title="" />
+                </div>
+              </div>
+              <form class="get-video__form" action="#!" method="POST">
+                <div class="form-field get-video__form-field">
+                  <label class="form-field__label">
+                    <span>Ваш номер телефона</span>
+                    <input class="form-field__input js-tel-input" type="text" name="" placeholder="+7(---) --- -- --" required="required" />
+                  </label>
+                </div>
+                <div class="form-send promo__form-send">
+                  <input class="form-send__btn btn btn_blue btn_lg" type="submit" value="Получить видео" />
+                  <p class="form-send__text">Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"</p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!--end promo-->
       </div>
       <!--+popup({name: 'call-popup'})-->
       <!--begin footer-->

@@ -165,15 +165,6 @@
       &-field
          padding: 0 25px
       &-send
-         text-align: center
-         &-btn
-            margin-bottom: 10px
-            width: 100%
-            min-width: 0
-      &-text
-         color: $color-2
-         font-size: 11px
-         line-height: 16px
       
 .anket
    position: relative
@@ -213,13 +204,6 @@
          max-width: 340px
          margin: 0 auto
          text-align: center
-         &-btn
-            margin-bottom: 20px
-            min-width: 338px
-         &-text
-            font-size: 11px
-            line-height: 13px
-            color: $color-2
          
    &__bg
       position: absolute
@@ -233,3 +217,59 @@
          right: 0
          width: 407px
          height: 544px
+
+.promo
+   padding: 70px
+   +cover
+   &__container
+      display: flex
+   
+   &__video-block
+      width: calc(100% - 437px)
+   &__get-video
+   &__top-text
+      margin-bottom: 10px
+      border-bottom: 1px solid rgba($color-1, .5)
+   &__title
+      margin-bottom: 10px
+   &__sub-title
+   &__descr
+      margin-bottom: 10px
+      font-size: 17px
+      line-height: 22px
+   &__video
+      &-wrap
+         position: relative
+         width: 722px
+         height: 407px
+         &::after
+            position: absolute
+            left: 0
+            bottom: -75px
+            width: 971px
+            height: 75px
+            background: url("../img/other/block-shadow.png")
+            content: ''
+         iframe
+            +coverdiv
+            width: 100%
+            height: 100%
+      &-text
+         position: absolute
+         top: 30px
+         left: 30px
+         z-index: 1
+         ul
+            li
+               position: relative
+               padding-left: 20px
+               +f('os700', 22, 28)
+               &::before
+                  position: absolute
+                  top: 5px
+                  left: 0
+                  width: 10px
+                  height: 10px
+                  border-radius: 50%
+                  background-color: #0057ae
+                  content: ''
