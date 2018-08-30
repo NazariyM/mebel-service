@@ -3,3 +3,18 @@
       opacity: 0
    100%
       opacity: 1
+
+// default anims
+[data-anim='fade-y']
+   opacity: 0
+   transform: translateY(50px)
+
+[data-anim-stagger="fade-x"]
+   > *
+      opacity: 0
+      transform: translateX(-50px)
+
+[data-anim-stagger="fade-y"]
+   > *
+      opacity: 0
+      transform: translateY(50px)

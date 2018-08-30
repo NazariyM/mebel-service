@@ -5,6 +5,8 @@ import './components/Sliders';
 import './components/CTabs';
 import './sections/Contact';
 import './components/Popups';
+import './components/scrollAnim';
+import './components/Anims';
 
 export class Common {
   constructor() {

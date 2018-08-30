@@ -13,12 +13,12 @@
     <body>
       <!--BEGIN header-->
       <header class="header">
-        <div class="header__line">
+        <div class="header__line" data-anim="fade-y" data-anim-delay="0">
           <div class="header__line-container container">
             <p>Кухонный гарнитур по индивидуальному дизайн проекту, точно в размер Вашего помещения. Доставка и установка по РМЭ бесплатно! От 20 т.р. п/м.</p>
           </div>
         </div>
-        <div class="header__info">
+        <div class="header__info" data-anim="fade-y" data-anim-delay="0.15">
           <div class="header__info-container container">
             <a class="logo header__logo" href="#!">
               <img src="img/other/logo.jpg" alt="img" title="" />
@@ -51,7 +51,7 @@
             </button>
           </div>
         </div>
-        <nav class="header__nav">
+        <nav class="header__nav" data-anim="fade-y" data-anim-delay="0.3">
           <div class="header__nav-container container">
             <ul class="header__nav-list">
               <li>
@@ -86,7 +86,7 @@
       <!--END header-->
       <div class="main">
         <!--begin screen-->
-        <section class="screen">
+        <section class="screen" data-anim="fade-y" data-anim-delay="0.5">
           <div class="screen__bg" style="background-image: url(img/bg/screen_bg.jpg)"></div>
           <div class="screen__container container">
             <h2 class="screen__title">ПРОИЗВОДСТВО КУХОНЬ №1 в г.ЙОШКАР-ОЛА от 10 ДНЕЙ С ГАРАНТИЕЙ до 5 ЛЕТ</h2>
@@ -127,8 +127,8 @@
         <section class="benefits">
           <div class="benefits__container container">
             <div class="benefits__block">
-              <h2 class="benefits__title title">Преимущества работы с нами</h2>
-              <div class="benefits__row row">
+              <h2 class="benefits__title title" data-anim="fade-y">Преимущества работы с нами</h2>
+              <div class="benefits__row row" data-anim-stagger="fade-y">
                 <div class="benefits__item">
                   <div class="benefits__item-icon-wrap">
                     <div class="benefits__item-icon benefits__item-icon_1"></div>
@@ -173,7 +173,7 @@
                   <p class="benefits__item-descr">Послегарантийное обслуживание, прописывается в договоре.</p>
                 </div>
               </div>
-              <a class="benefits__more-btn btn btn_blue btn_lg" href="#!">Узнать подробнее</a>
+              <a class="benefits__more-btn btn btn_blue btn_lg" href="#!" data-anim="fade-y">Узнать подробнее</a>
             </div>
           </div>
         </section>
@@ -182,14 +182,14 @@
         <section class="team-poster" style="background-image: url(img/bg/stripes_bg.png)">
           <div class="team-poster__container container">
             <div class="team-poster__block">
-              <div class="team-poster__top-text">
+              <div class="team-poster__top-text" data-anim="fade-y">
                 <h2 class="team-poster__title title">ПРОфессиональная и сильная команда</h2>
                 <h5 class="team-poster__sub-title title-md">работающая над воплощением кухни вашей мечты</h5>
               </div>
-              <div class="team-poster__img-wrap">
+              <div class="team-poster__img-wrap" data-anim="fade-y" data-anim-delay="0.15">
                 <img class="team-poster__img" src="img/content/team-poster_img.jpg" alt="image" title="" />
               </div>
-              <div class="team-poster__bot-text">
+              <div class="team-poster__bot-text" data-anim-stagger="fade-y">
                 <h6 class="team-poster__sub-title title-md">ЕСЛИ ВЫ ХОТИТЕ РАБОТАТЬ В НАШЕЙ КОМАНДЕ</h6>
                 <p class="team-poster__descr">Оставьте свои данные и мы свяжемся с Вами в ближайшее время.</p>
                 <a class="team-poster__btn btn btn_blue btn_lg" href="#!">Оставить данные</a>
@@ -201,8 +201,8 @@
         <!--begin steps-->
         <section class="steps">
           <div class="steps__container container">
-            <h2 class="steps__title title">от новенькой и стильной кухни вас отделяет всего 6 шагов</h2>
-            <div class="steps__row row">
+            <h2 class="steps__title title" data-anim="fade-y">от новенькой и стильной кухни вас отделяет всего 6 шагов</h2>
+            <div class="steps__row row" data-anim-stagger="fade-y">
               <div class="steps__item">
                 <div class="steps__item-icon-wrap">
                   <div class="steps__item-icon steps__item-icon_1"></div>
@@ -264,9 +264,9 @@
         </section>
         <!--end steps-->
         <!--begin request-->
-        <section class="request" style="background-image: url(img/bg/request_bg.png)">
+        <section class="request" data-anim="fade-x" data-anim-delay=".3" style="background-image: url(img/bg/request_bg.png)">
           <div class="request__container container">
-            <form class="request__form" action="#!" method="POST">
+            <form class="request__form" action="#!" method="POST" data-anim="fade-x" data-anim-delay=".5">
               <h3 class="request__form-title title">ОСТАВЬТЕ ЗАЯВКУ
                 <br>НА БЕСПЛАТНОЕ ТАКСИ
                 <br>ДО «МЕБЕЛЬсервис»</h3>
@@ -294,13 +294,13 @@
         <section class="anket">
           <div class="anket__container container">
             <div class="anket__block">
-              <div class="anket__block-top-text">
+              <div class="anket__block-top-text" data-anim="fade-y">
                 <h2 class="anket__title title">индивидуальная рассрочка под
                   <span>0%</span>
                 </h2>
                 <h4 class="anket__sub-title title-md">от компании мебель макс. без участия банка, без справок</h4>
               </div>
-              <div class="anket__block-inner">
+              <div class="anket__block-inner" data-anim="fade-y" data-anim-delay="0.3">
                 <form class="anket__form" action="#!" method="POST">
                   <div class="anket__form-text">
                     <h4 class="anket__form-title title-md">заполните короткую анкету</h4>
@@ -351,17 +351,17 @@
         <section class="promo" style="background-image: url(img/bg/promo_bg.jpg)">
           <div class="promo__container container">
             <div class="promo__video-block">
-              <div class="promo__top-text">
+              <div class="promo__top-text" data-anim="fade-x" data-anim-delay="0">
                 <h2 class="promo__title title">ЛУЧШИЕ ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h2>
                 <h5 class="promo__sub-title title-md">ОТ МЕБЕЛЬСЕРВИС, каталог с любовью</h5>
               </div>
-              <p class="promo__descr">Бесплатный каталог + видео
+              <p class="promo__descr" data-anim="fade-x" data-anim-delay="0.2">Бесплатный каталог + видео
                 <br>˝10 Ошибок при покупке кухонного гарнитура˝</p>
-              <div class="promo__video-wrap">
+              <div class="promo__video-wrap" data-anim="fade-x" data-anim-delay="0.4">
                 <iframe src="https://www.youtube.com/embed/r5SeqDeSsGY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
               </div>
             </div>
-            <div class="get-video promo__get-video">
+            <div class="get-video promo__get-video" data-anim="fade-x" data-anim-delay="0.4">
               <div class="get-video__top">
                 <h4 class="get-video__title title-md">скачайте каталог + видео</h4>
                 <p class="get-video__descr">Начните выбор кухонного гарнитура, не
@@ -390,8 +390,8 @@
         <section class="view-catalog">
           <div class="view-catalog__container container">
             <div class="view-catalog__block">
-              <h2 class="view-catalog__title title">НАЙДИТЕ ПОДХОДЯЩИЙ КУХОННЫЙ ГАРНИТУР ПО СВОЕЙ ПЛАНИРОВКЕ</h2>
-              <div class="view-catalog__slider">
+              <h2 class="view-catalog__title title" data-anim="fade-y">НАЙДИТЕ ПОДХОДЯЩИЙ КУХОННЫЙ ГАРНИТУР ПО СВОЕЙ ПЛАНИРОВКЕ</h2>
+              <div class="view-catalog__slider" data-anim="fade-y" data-anim-delay="0.2">
                 <div class="view-catalog__slider-item">
                   <div class="view-block">
                     <div class="view-block__img">
@@ -579,7 +579,7 @@
                   </div>
                 </div>
               </div>
-              <div class="view-catalog__more">
+              <div class="view-catalog__more" data-anim="fade-y" data-anim-delay="0.4">
                 <a class="view-catalog__more-btn btn btn_blue btn_lg" href="#!">Посмотреть каталог</a>
               </div>
             </div>
@@ -589,11 +589,11 @@
         <!--begin testimonials-->
         <section class="testimonials" style="background-image: url(img/bg/stripes_bg.png)">
           <div class="testimonials__container container">
-            <div class="testimonials__top">
+            <div class="testimonials__top" data-anim="fade-y" data-anim-delay="0">
               <h2 class="testimonials__title title">анкеты - отзывы</h2>
               <h4 class="testimonials__sub-title title-md">которые заполняет каждый клиент после установки кухни</h4>
             </div>
-            <div class="testimonials__slider slider-default slider-btn-default">
+            <div class="testimonials__slider slider-default slider-btn-default" data-anim="fade-y" data-anim-delay="0.2">
               <div class="testimonials__item">
                 <div class="testimonials__item-text">
                   <div class="testimonials__item-text-top">
@@ -629,7 +629,7 @@
                 </div>
               </div>
             </div>
-            <div class="testimonials__action">
+            <div class="testimonials__action" data-anim="fade-y" data-anim-delay="0.4">
               <a class="testimonials__action-btn btn btn_blue btn_lg" href="#!">Оставить отзыв</a>
               <p class="testimonials__action-descr">Отзыв попадает лично Директору</p>
             </div>
@@ -640,15 +640,15 @@
         <section class="promo promo_mod">
           <div class="promo__container container">
             <div class="promo__video-block">
-              <div class="promo__top-text promo__top-text_mod">
+              <div class="promo__top-text promo__top-text_mod" data-anim="fade-x" data-anim-delay="0">
                 <h2 class="promo__title title">ДАРИМ СКИДКУ -20% НА ЗАМЕРЕ</h2>
               </div>
-              <p class="promo__descr">Посмотрите видео и узнайте, 4 главных критерия выбора кухонного гарнитура и что будет после просмотра каталога?</p>
-              <div class="promo__video-wrap promo__video-wrap_lg">
+              <p class="promo__descr" data-anim="fade-x" data-anim-delay="0.2">Посмотрите видео и узнайте, 4 главных критерия выбора кухонного гарнитура и что будет после просмотра каталога?</p>
+              <div class="promo__video-wrap promo__video-wrap_lg" data-anim="fade-x" data-anim-delay="0.4">
                 <iframe src="https://www.youtube.com/embed/r5SeqDeSsGY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
               </div>
             </div>
-            <div class="get-video promo__get-video">
+            <div class="get-video promo__get-video" data-anim="fade-x" data-anim-delay="0.4">
               <div class="get-video__top get-video__top_mod">
                 <h4 class="get-video__title title-md">ЗАПИШИТЕСЬ НА ЗАМЕР
                   <br>И ПОЛУЧИТЕ ПОДАРОК
@@ -686,9 +686,9 @@
         <section class="teaser">
           <div class="teaser__container container">
             <div class="teaser__block">
-              <h2 class="teaser__title title">наши гарнитуры</h2>
+              <h2 class="teaser__title title" data-anim="fade-y" data-anim-delay="0">наши гарнитуры</h2>
               <div class="c-tabs teaser__tabs">
-                <div class="c-tabs__nav">
+                <div class="c-tabs__nav" data-anim="fade-y" data-anim-delay="0.2">
                   <button class="c-tabs__btn is-active" type="button">Маленькие кухни / хрущевки</button>
                   <button class="c-tabs__btn" type="button">Кухня гостинная / в студию</button>
                   <button class="c-tabs__btn" type="button">Современные кухни</button>
@@ -697,7 +697,7 @@
                 </div>
                 <div class="c-tabs__for">
                   <div class="c-tabs__tab">
-                    <div class="teaser__slider slider-default">
+                    <div class="teaser__slider slider-default" data-anim="fade-y" data-anim-delay="0.4">
                       <div class="teaser__slider-img">
                         <img src="img/content/teaser_img.jpg" alt="image" title="" />
                       </div>
@@ -708,10 +708,10 @@
                         <img src="img/content/teaser_img.jpg" alt="image" title="" />
                       </div>
                     </div>
-                    <div class="teaser__btn-wrap">
+                    <div class="teaser__btn-wrap" data-anim="fade-y" data-anim-delay="0.5">
                       <a class="teaser__btn btn btn_blue btn_lg" href="#!">Рассчитать кухню</a>
                     </div>
-                    <div class="teaser__row row">
+                    <div class="teaser__row row" data-anim-stagger="fade-y">
                       <div class="teaser__item">
                         <div class="teaser__item-icon-wrap">
                           <div class="teaser__item-icon teaser__item-icon_pantone"></div>
@@ -757,7 +757,7 @@
                     </div>
                   </div>
                   <div class="c-tabs__tab">
-                    <div class="teaser__slider slider-default">
+                    <div class="teaser__slider slider-default" data-anim="fade-y" data-anim-delay="0.4">
                       <div class="teaser__slider-img">
                         <img src="img/content/teaser_img.jpg" alt="image" title="" />
                       </div>
@@ -768,10 +768,10 @@
                         <img src="img/content/teaser_img.jpg" alt="image" title="" />
                       </div>
                     </div>
-                    <div class="teaser__btn-wrap">
+                    <div class="teaser__btn-wrap" data-anim="fade-y" data-anim-delay="0.5">
                       <a class="teaser__btn btn btn_blue btn_lg" href="#!">Рассчитать кухню</a>
                     </div>
-                    <div class="teaser__row row">
+                    <div class="teaser__row row" data-anim-stagger="fade-y">
                       <div class="teaser__item">
                         <div class="teaser__item-icon-wrap">
                           <div class="teaser__item-icon teaser__item-icon_pantone"></div>
@@ -817,7 +817,7 @@
                     </div>
                   </div>
                   <div class="c-tabs__tab">
-                    <div class="teaser__slider slider-default">
+                    <div class="teaser__slider slider-default" data-anim="fade-y" data-anim-delay="0.4">
                       <div class="teaser__slider-img">
                         <img src="img/content/teaser_img.jpg" alt="image" title="" />
                       </div>
@@ -828,10 +828,10 @@
                         <img src="img/content/teaser_img.jpg" alt="image" title="" />
                       </div>
                     </div>
-                    <div class="teaser__btn-wrap">
+                    <div class="teaser__btn-wrap" data-anim="fade-y" data-anim-delay="0.5">
                       <a class="teaser__btn btn btn_blue btn_lg" href="#!">Рассчитать кухню</a>
                     </div>
-                    <div class="teaser__row row">
+                    <div class="teaser__row row" data-anim-stagger="fade-y">
                       <div class="teaser__item">
                         <div class="teaser__item-icon-wrap">
                           <div class="teaser__item-icon teaser__item-icon_pantone"></div>
@@ -877,7 +877,7 @@
                     </div>
                   </div>
                   <div class="c-tabs__tab">
-                    <div class="teaser__slider slider-default">
+                    <div class="teaser__slider slider-default" data-anim="fade-y" data-anim-delay="0.4">
                       <div class="teaser__slider-img">
                         <img src="img/content/teaser_img.jpg" alt="image" title="" />
                       </div>
@@ -888,10 +888,10 @@
                         <img src="img/content/teaser_img.jpg" alt="image" title="" />
                       </div>
                     </div>
-                    <div class="teaser__btn-wrap">
+                    <div class="teaser__btn-wrap" data-anim="fade-y" data-anim-delay="0.5">
                       <a class="teaser__btn btn btn_blue btn_lg" href="#!">Рассчитать кухню</a>
                     </div>
-                    <div class="teaser__row row">
+                    <div class="teaser__row row" data-anim-stagger="fade-y">
                       <div class="teaser__item">
                         <div class="teaser__item-icon-wrap">
                           <div class="teaser__item-icon teaser__item-icon_pantone"></div>
@@ -937,7 +937,7 @@
                     </div>
                   </div>
                   <div class="c-tabs__tab">
-                    <div class="teaser__slider slider-default">
+                    <div class="teaser__slider slider-default" data-anim="fade-y" data-anim-delay="0.4">
                       <div class="teaser__slider-img">
                         <img src="img/content/teaser_img.jpg" alt="image" title="" />
                       </div>
@@ -948,10 +948,10 @@
                         <img src="img/content/teaser_img.jpg" alt="image" title="" />
                       </div>
                     </div>
-                    <div class="teaser__btn-wrap">
+                    <div class="teaser__btn-wrap" data-anim="fade-y" data-anim-delay="0.5">
                       <a class="teaser__btn btn btn_blue btn_lg" href="#!">Рассчитать кухню</a>
                     </div>
-                    <div class="teaser__row row">
+                    <div class="teaser__row row" data-anim-stagger="fade-y">
                       <div class="teaser__item">
                         <div class="teaser__item-icon-wrap">
                           <div class="teaser__item-icon teaser__item-icon_pantone"></div>
@@ -1003,7 +1003,7 @@
         </section>
         <!--end teaser-->
         <!--begin express-->
-        <section class="express section-lines">
+        <section class="express section-lines" data-anim="fade-y" data-anim-delay="0.3">
           <div class="express__container container">
             <div class="express__block">
               <div class="express__block-text">
@@ -1020,11 +1020,11 @@
         <!--begin stages-->
         <section class="stages" style="background-image: url(img/bg/stripes_bg.png)">
           <div class="stages__container container">
-            <div class="stages__top">
+            <div class="stages__top" data-anim="fade-y">
               <h2 class="stages__title title">ЧТО ДЕЛАЕТ КОМАНДА «МЕБЕЛЬ СЕРВИС»</h2>
               <h4 class="stages__sub-title title-md">ДЛЯ ТОГО ЧТОБЫ ВЫ ПОЛУЧИЛИ НАИВЫСШЕЕ КАЧЕСТВО И ЧУВСТВО ВОСТОРГА ОТ ВАШЕЙ КУХНИ</h4>
             </div>
-            <div class="stages__row row">
+            <div class="stages__row row" data-anim-stagger="fade-y" data-stagger-delay="0.4">
               <div class="stages__item">
                 <div class="stages__item-count"></div>
                 <h6 class="stages__item-title">каталог кухонных гарнитуров</h6>
@@ -1047,7 +1047,7 @@
               </div>
             </div>
             <div class="stages__more">
-              <button class="stages__more-btn btn btn_blue btn_lg" type="button">Смотреть полностью</button>
+              <button class="stages__more-btn btn btn_blue btn_lg" type="button" data-anim="fade-y">Смотреть полностью</button>
             </div>
           </div>
         </section>
@@ -1056,9 +1056,9 @@
         <section class="assort">
           <div class="assort__container container">
             <div class="assort__inner">
-              <h2 class="assort__title title">МЫ ТАК ЖЕ ПРОИЗВОДИМ
+              <h2 class="assort__title title" data-anim="fade-y">МЫ ТАК ЖЕ ПРОИЗВОДИМ
                 <br>ЛЮБУЮ КОРПУСНУЮ МЕБЕЛЬ НА ЗАКАЗ</h2>
-              <div class="assort__row row">
+              <div class="assort__row row" data-anim-stagger="fade-y" data-stagger-delay="0.4">
                 <div class="assort__item">
                   <div class="assort__item-img" style="background-image: url(img/content/assort-img_1.jpg)"></div>
                   <span class="assort__item-label text-label text-label_white">мебель для прихожих</span>
@@ -1086,13 +1086,13 @@
         <!--end assort-->
         <!--begin contact-->
         <section class="contact">
-          <div class="contact__text-container container">
+          <div class="contact__text-container container" data-anim="fade-x">
             <h2 class="contact__title title">как нас найти ?</h2>
             <h4 class="contact__sub-title title-md">Г. ЙОШКАР-ОЛА, УЛ. КАРЛА МАРКСА, 99, ТЦ «ФОРУМ», ЦОКОЛЬНЫЙ ЭТАЖ</h4>
           </div>
           <div class="contact__map-wrap">
             <div class="contact__map-container container">
-              <div class="contact__block">
+              <div class="contact__block" data-anim="fade-x" data-anim-delay="0.4">
                 <div class="contact__block-img-wrap">
                   <img src="img/content/contact-block_img.jpg" alt="image" title="" />
                 </div>
@@ -1127,9 +1127,9 @@
                 </div>
               </div>
             </div>
-            <div class="contact__map" data-lat="56.628462" data-lng="47.894926" data-marker-lat="56.628460" data-marker-lng="47.897241" data-zoom="17"></div>
+            <div class="contact__map" data-lat="56.628462" data-lng="47.894926" data-marker-lat="56.628460" data-marker-lng="47.897241" data-zoom="17" data-anim="fade-x"></div>
           </div>
-          <div class="contact__ask">
+          <div class="contact__ask" data-anim="fade-y">
             <div class="contact__ask-container container">
               <div class="contact__ask-inner">
                 <div class="contact__ask-row row">
@@ -1149,8 +1149,8 @@
         <!--begin faq-->
         <section class="faq" style="background-image: url(img/bg/stripes_bg.png)">
           <div class="faq__container container">
-            <h2 class="faq__title title">часто задаваемые вопросы</h2>
-            <div class="faq__item">
+            <h2 class="faq__title title" data-anim="fade-y">часто задаваемые вопросы</h2>
+            <div class="faq__item" data-anim="fade-y">
               <h5 class="faq__item-title">Кухни в Йошкар-Оле от МебельСервис - почувствуйте удовольствие от готовки на собственной кухне!</h5>
               <p class="faq__item-descr">Приготовление новых блюд, тихие семейные вечера на новой кухне - наслаждайтесь вместе с кухней от “МебельСервис”. В основе нашей работы заложены определенные принципы: мы никогда не навязываем клиенту дополнительных услуг, не предлагаем
                 некачественные материалы, полностью погружаемся в желания и идеи заказчика. С нами вы сможете воплотить в жизнь самые необычные идеи! Клиенты любят нас за то, что мы открыты к ним:</p>
@@ -1164,7 +1164,7 @@
               </ul>
               <p class="faq__descr">Пользуйтесь надёжной кухонной мебелью с «МебельСервис» и наслаждайтесь вкусом любимых блюд!</p>
             </div>
-            <div class="faq__item">
+            <div class="faq__item" data-anim="fade-y">
               <h5 class="faq__item-title">Для тех, у кого остались вопросы по дизайну кухни</h5>
               <p class="faq__item-descr">Продумаем дизайн интерьера кухни и поможем найти уютное и функциональное решение даже для непростых планировок:</p>
               <ul class="faq__item-list">
@@ -1174,7 +1174,7 @@
                 <li>Выезд дизайнера на замеры всегда бесплатный, даже если вам не понравится ни один из вариантов гарнитуров.</li>
               </ul>
             </div>
-            <div class="faq__item">
+            <div class="faq__item" data-anim="fade-y">
               <h5 class="faq__item-title">Если остались вопросы по кухонным гарнитурам</h5>
               <p class="faq__item-descr">В ассортименте — кухонные гарнитуры для маленькой кухни (угловые и обычные), решения для квартир-студий и домашних пространств любой планировки.</p>
               <p class="faq__item-descr">Если вам не понравился ни один из представленных в каталоге гарнитуров - ничего страшного! Дизайнер приедет к вам, сделает замеры и подготовит варианты. Вы можете подъехать к нам в офис на бесплатном такси, и мы вместе выберем индивидуальный
@@ -1220,7 +1220,7 @@
       <footer class="footer">
         <div class="footer__info">
           <div class="footer__container container">
-            <div class="footer__info-row row">
+            <div class="footer__info-row row" data-anim-stagger="fade-y">
               <div class="footer__info-col">
                 <h4 class="footer__info-title">КУХНИ</h4>
                 <ul class="footer__info-list">
@@ -1269,7 +1269,7 @@
             </div>
           </div>
         </div>
-        <div class="footer__bottom">
+        <div class="footer__bottom" data-anim="fade-y" data-anim-delay="0.5">
           <div class="footer__bottom-container container">
             <a class="logo footer__logo" href="#!">
               <img src="img/other/logo.jpg" alt="img" title="" />
