@@ -1,74 +1,116 @@
 .popup
-  position: fixed
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  opacity: 0
-  visibility: hidden
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
-  z-index: 1300
-  overflow: auto
-  outline: 0
-  text-align: center
-  font-size: 0
-  transform: translate3d(0, 0, 0)
-  background-color: rgba(#000,.8)
-  transition: opacity .3s ease, transform .5s ease, visibility .5s
-  will-change: opacity, transform
-  $parent: &
-  &:after
-    content: ''
-    display: inline-block
-    vertical-align: middle
-    width: 0
-    height: 100%
-    
-  &.opened
-    opacity: 1
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
-    visibility: visible
-  &__close
-    position: absolute
-    top: 10px
-    right: 20px
-    z-index: 10
-    cursor: pointer
-    padding: 0
-    display: flex
-    align-items: center
-    justify-content: center
-    border: 0
-    width: 32px
-    height: 32px
-    &:hover svg
-      fill: $color-3
-    svg
-      fill: $black
-      width: 17px
-      height: 17px
-      +trs
-      
-  &__container
-    display: inline-block
-    vertical-align: middle
-    max-width: 450px
-    width: 100%
-    position: relative
-    padding: 0 15px
-    margin: 30px auto
-    transition: opacity .5s ease, transform .5s ease
-    transform: translate3d(0, -100px, 0)
-    will-change: transform, opacity
-    text-align: left
-    border-radius: 5px
-    +mob-fix
+   position: fixed
+   top: 0
+   right: 0
+   bottom: 0
+   left: 0
+   opacity: 0
+   visibility: hidden
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+   z-index: 1300
+   overflow: auto
+   outline: 0
+   text-align: center
+   font-size: 0
+   transform: translate3d(0, 0, 0)
+   background-color: rgba(#333, .9)
+   transition: opacity .3s ease, transform .5s ease, visibility .5s
+   will-change: opacity, transform
+   $parent: &
+   &:after
+      content: ''
+      display: inline-block
+      vertical-align: middle
+      width: 0
+      height: 100%
+   
+   &.opened
+      opacity: 1
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+      visibility: visible
+   &__close
+      position: absolute
+      top: 10px
+      right: 20px
+      z-index: 10
+      cursor: pointer
+      padding: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      border: 0
+      width: 32px
+      height: 32px
+      +xs
+         right: 10px
+      &:hover svg
+         fill: $color-1
+         stroke: $color-1
+      svg
+         fill: $black
+         width: 17px
+         height: 17px
+         stroke: $black
+         stroke-width: 40px
+         +trs
+   
+   &__container
+      display: inline-block
+      vertical-align: middle
+      max-width: 760px
+      width: 100%
+      position: relative
+      padding: 0 15px
+      margin: 30px auto
+      transition: opacity .5s ease, transform .5s ease
+      transform: translate3d(0, -100px, 0)
+      will-change: transform, opacity
+      text-align: left
+      border-radius: 5px
+      +xs
+         padding: 0
 
 body.popup-opened
-  overflow: hidden
+   overflow: hidden
 
 .popup.opened .popup__container
-  -webkit-transform: translate3d(0, 0, 0)
-  -moz-transform: translate3d(0, 0, 0)
-  transform: translate3d(0, 0, 0)
-  
+   -webkit-transform: translate3d(0, 0, 0)
+   -moz-transform: translate3d(0, 0, 0)
+   transform: translate3d(0, 0, 0)
+
+.call-popup
+   display: flex
+   box-shadow: 0 0 13px 2px rgba(0, 0, 0, 0.2)
+   background: #fff
+   &__img
+      width: 292px
+      +xs
+         display: none
+   &__content
+      padding: 32px 50px 30px
+      width: calc(100% - 292px)
+      +xs
+         width: 100%
+         padding: 43px 15px 30px
+   &__text
+      margin-bottom: 30px
+      padding-bottom: 27px
+      border-bottom: 1px solid rgba($color-1, .5)
+      +xs
+         margin-bottom: 15px
+         padding-bottom: 15px
+         text-align: center
+   &__title
+      +f('os800')
+      font-size: 23px
+      text-align: left
+      margin-bottom: 10px
+      +xs
+         text-align: center
+   &__descr
+      font-size: 17px
+      line-height: 22px
+   &__form-field label span
+      font-size: 16px
+   &__form-send
+      margin-top: 30px

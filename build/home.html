@@ -43,7 +43,7 @@
                 <a class="contact-block__item-text" href="tel:+78362398639">+7 (8362) 39 - 86 - 39</a>
               </div>
             </div>
-            <button class="header__call-btn btn btn_blue btn_md" type="button">Заказать звонок</button>
+            <button class="header__call-btn btn btn_blue btn_md" type="button" data-popup-target="call-popup">Заказать звонок</button>
             <button class="header__nav-btn" type="button">
               <div class="header__nav-btn-burger">
                 <div class="header__nav-btn-lines"></div>
@@ -80,6 +80,7 @@
               </li>
             </ul>
           </div>
+          <button class="header__call-btn header__call-btn_mob btn btn_blue btn_md" type="button" data-popup-target="call-popup">Заказать звонок</button>
         </nav>
       </header>
       <!--END header-->
@@ -357,14 +358,6 @@
               <p class="promo__descr">Бесплатный каталог + видео
                 <br>˝10 Ошибок при покупке кухонного гарнитура˝</p>
               <div class="promo__video-wrap">
-                <div class="promo__video-text">
-                  <ul>
-                    <li>Заполни форму</li>
-                    <li>Получи ссылку</li>
-                    <li>Изучай каталог</li>
-                    <li>Смотри видео</li>
-                  </ul>
-                </div>
                 <iframe src="https://www.youtube.com/embed/r5SeqDeSsGY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
               </div>
             </div>
@@ -1191,7 +1184,38 @@
         </section>
         <!--end faq-->
       </div>
-      <!--+popup({name: 'call-popup'})-->
+      <div class="popup" data-popup-id="call-popup" tabindex="-1" role="dialog">
+        <div class="popup__container">
+          <div class="popup__close js-popup-close">
+            <svg class="icon icon-close ">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </div>
+          <div class="call-popup">
+            <div class="call-popup__img">
+              <img src="img/content/call-pop_img.jpg" alt="image" title="" />
+            </div>
+            <div class="call-popup__content">
+              <div class="call-popup__text">
+                <h4 class="call-popup__title title-md">Заполните форму!</h4>
+                <p class="call-popup__descr">Укажите свой телефон, мы свяжемся с Вами в самое ближайшее время</p>
+              </div>
+              <form class="call-popup__form" action="#!" method="POST">
+                <div class="form-field call-popup__form-field">
+                  <label class="form-field__label">
+                    <span>Ваш номер телефона</span>
+                    <input class="form-field__input js-tel-input" type="text" name="" placeholder="+7(---) --- -- --" required="required" />
+                  </label>
+                </div>
+                <div class="form-send call-popup__form-send">
+                  <input class="form-send__btn btn btn_blue btn_lg" type="submit" value="Узнать подробности" />
+                  <p class="form-send__text">Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"</p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
       <!--begin footer-->
       <footer class="footer">
         <div class="footer__info">

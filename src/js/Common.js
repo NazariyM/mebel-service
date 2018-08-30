@@ -4,7 +4,7 @@ import './components/Header';
 import './components/Sliders';
 import './components/CTabs';
 import './sections/Contact';
-// import './Popups';
+import './components/Popups';
 
 export class Common {
   constructor() {

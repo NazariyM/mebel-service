@@ -5,3 +5,18 @@ mixin popup(el)
 			+b.popup(data-popup-id='call-popup', tabindex='-1', role='dialog')
 				+e.container
 					+e.close.js-popup-close: +i('close')
+					+b.call-popup
+						+e.img
+							+e.IMG(src='img/content/call-pop_img.jpg' alt='image')
+						+e.content
+							+e.text
+								+e.H4.title.title-md Заполните форму!
+								+e.P.descr Укажите свой телефон, мы свяжемся с Вами в самое ближайшее время
+							+e.FORM.form(action='#!' method='POST')
+								+b.form-field.call-popup__form-field
+									+e.LABEL.label
+										span Ваш номер телефона
+										+e.INPUT.input.js-tel-input(type='text' name='' placeholder='+7(---) --- -- --' required)
+								+b.form-send.call-popup__form-send
+									+e.INPUT.btn.btn._blue._lg(type='submit' value='Узнать подробности')
+									+e.P.text Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"

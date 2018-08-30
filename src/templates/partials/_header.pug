@@ -23,7 +23,7 @@
 						+e.item-icon._tel
 					+e.A.item-text(href='tel:+78362398639') +7 (8362) 39 - 86 - 39
 
-			+e.BUTTON.call-btn.btn._blue._md(type='button') Заказать звонок
+			+e.BUTTON.call-btn.btn._blue._md(type='button' data-popup-target='call-popup') Заказать звонок
 
 			+e.BUTTON.nav-btn(type='button')
 				+e.nav-btn-burger
@@ -45,5 +45,6 @@
 			+e.UL.nav-list
 				for navLink, i in navList
 					li: a(href='#!')= navLink
+		+e.BUTTON.call-btn._mob.btn._blue._md(type='button' data-popup-target='call-popup') Заказать звонок
 
 //END header
