@@ -1,4 +1,5 @@
 .logo
+   display: block
    img
       display: block
       width: 198px
@@ -11,12 +12,26 @@
    &_header
       margin-left: 30px
       flex: 1 1 auto
+      +md
+         margin-left: 100px
+      +sm
+         margin-left: auto
+         margin-right: 30px
+         flex: 0 1 auto
+      +xs
+         display: none
    &__item
       display: flex
       #{$parent}_header &
          flex: 1 1 auto
          &:not(:last-child)
             margin-right: 15px
+         &:nth-child(1)
+            +md
+               display: none
+         &:nth-child(2)
+            +sm
+               display: none
       #{$parent}_default &
          align-items: center
          flex: 0 1 auto
@@ -51,6 +66,7 @@
          &_email
             +sprite('email')
       &-text
+         flex-shrink: 0
          font-size: 13px
          color: $color-4
          #{$parent}_default &
@@ -66,6 +82,12 @@
    border: 10px solid #0057ae
    background: $white url("../img/other/grid-bg.png")
    z-index: 1
+   +md
+      width: 408px
+      padding: 22px 15px 27px
+   +xs
+      width: 100%
+      border: 0
    &__top
       margin-bottom: 25px
       padding-bottom: 30px
@@ -78,6 +100,8 @@
       line-height: 32px
       letter-spacing: 0.035em
       text-align: left
+      +xs
+         font-size: 16px
    &__descr
       margin-bottom: 30px
       font-size: 15px
@@ -89,6 +113,9 @@
       width: 302px
       height: 160px
       +cover-img
+      +xs
+         width: 100%
+         height: auto
    &__form-field
       &:not(:last-child)
          margin-bottom: 28px
@@ -188,10 +215,15 @@
       float: left
       padding-right: 20px
       width: percentage(687 / 1066)
+      +sm
+         width: 100%
+         padding-right: 0
       .slick-list
       &-item
          padding-left: 4px
          background: #fff
+         +xs
+            padding: 0 0 40px
       &-wrap
          +ratio(661, 459)
          +cover-img
@@ -201,19 +233,39 @@
             height: 100%
       &-label
          bottom: 40px
+         +xs
+            bottom: -40px
+            left: 0
+            width: 100%
+            min-width: 0
+            padding: 8px 15px
+            box-shadow: none
+            border-radius: 0
    &__nav
       float: left
       width: percentage(378 / 1066)
+      +sm
+         width: 100%
       .slick-list
          margin: 0 -10px
+         +xs
+            margin: 0 -5px
       &-item
          width: calc(50% - 20px)!important
          margin: 0 10px
          +cover-img
          cursor: pointer
          +ratio(179, 140)
+         +sm
+            margin-top: 18px
+            width: calc(33.33333% - 20px)!important
+         +xs
+            margin: 10px 5px 0
+            width: calc(33.33333% - 10px)!important
          &:nth-child(2) ~ &
             margin-top: 18px
+            +xs
+               margin-top: 10px
          img
             +coverdiv
             width: 100%

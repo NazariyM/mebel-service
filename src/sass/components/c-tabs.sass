@@ -6,7 +6,7 @@
 		justify-content: center
 		z-index: 1
 		margin-bottom: 38px
-		+sm
+		+xs
 			flex-direction: column
 			align-items: center
 	
@@ -23,7 +23,11 @@
 		+f('os600', 16, 16)
 		color: $color-1
 		+trs
-		
+		+sm
+			font-size: 15px
+			padding: 10px
+		+xs
+			width: 100%
 		&.is-active
 			pointer-events: none
 			background-color: $color-1
@@ -36,7 +40,9 @@
 		
 		&:not(:last-child)
 			border-right: 1px solid $color-1
-	
+			+xs
+				border-right: 0
+				border-bottom: 0
 	&__tab
 		display: none
 		

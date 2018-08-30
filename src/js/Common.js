@@ -1,5 +1,6 @@
 import objectFitImages from 'object-fit-images';
 import 'jquery-mask-plugin';
+import './components/Header';
 import './components/Sliders';
 import './components/CTabs';
 import './sections/Contact';

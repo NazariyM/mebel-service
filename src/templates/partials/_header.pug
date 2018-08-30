@@ -25,6 +25,10 @@
 
 			+e.BUTTON.call-btn.btn._blue._md(type='button') Заказать звонок
 
+			+e.BUTTON.nav-btn(type='button')
+				+e.nav-btn-burger
+					+e.nav-btn-lines
+
 	+e.NAV.nav
 		+e.nav-container.container
 			-
@@ -41,9 +45,5 @@
 			+e.UL.nav-list
 				for navLink, i in navList
 					li: a(href='#!')= navLink
-
-			//+e.BUTTON.nav-btn(type='button')
-			//	+e.nav-btn-burger
-			//		+e.nav-btn-lines
 
 //END header

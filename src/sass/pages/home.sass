@@ -2,6 +2,8 @@
    position: relative
    padding: 33px 0 37px
    background: #000
+   +sm
+      height: calc(100vh - 68px)
    &__bg
       +coverdiv
       +cover
@@ -16,6 +18,8 @@
       justify-content: space-between
       position: relative
       z-index: 1
+      +sm
+         height: 100%
    &__title
       flex: 0 1 778px
       padding-right: 30px
@@ -25,22 +29,47 @@
       line-height: 62px
       +f('os800')
       text-align: left
+      +md
+         font-size: 46px
+      +sm
+         font-size: 34px
+         line-height: 44px
+         padding-right: 10px
+      +xs
+         font-size: 26px
+         line-height: 36px
+         padding-right: 0
    &__download-block
       width: 352px
+      +xs
+         display: none
 
 .benefits
    padding: 62px 0 100px
    text-align: center
+   +xs
+      padding: 50px 0 60px
    &__block
       padding: 13px 20px 0 35px
       box-shadow: -5px 5px 8px 0 rgba(0,0,0,.2)
+      +sm
+         padding: 13px 20px 0
+      +xs
+         padding: 13px 10px 0
    &__title
       margin-bottom: 60px
+      +xs
+         margin-bottom: 30px
    &__row
       padding-bottom: 20px
    &__item
       flex: 0 1 33.33333%
       padding: 0 15px
+      +sm
+         flex: 0 1 50%
+      +xs
+         flex: 0 1 auto
+         
       &:nth-child(3) ~ &
          padding: 30px 15px 0
       &-icon
@@ -77,19 +106,31 @@
             max-width: 300px
    &__more-btn
       position: relative
-      top: 20px
+      top: 24px
          
 .team-poster
    padding: 93px 0 90px
    text-align: center
    +cover
+   +xs
+      padding: 50px 0
    &__container
+      +xs
+         margin: 0 -15px
    &__block
       padding: 42px 21px 55px
       box-shadow: 0 0 13px 2px rgba(0, 0, 0, 0.2)
       background: $white
+      +xs
+         padding: 35px 15px
    &__title
+      +xs
+         margin-bottom: 5px
+         font-size: 24px
+         line-height: 30px
    &__sub-title
+      +xs
+         margin-bottom: 5px
    &__img
       +coverdiv
       +cover
@@ -103,11 +144,19 @@
       color: $color-2
       font-size: 16px
       line-height: 20px
+      +xs
+         font-size: 15px
 
 .steps
    padding: 74px 0
+   +sm
+      padding: 74px 0 120px
+   +xs
+      padding: 50px 0 120px
    &__row
       align-items: flex-start
+      +md
+         justify-content: center
    &__title
       max-width: 700px
       margin: 0 auto 120px
@@ -117,14 +166,32 @@
       flex: 0 1 33.33333%
       padding: 0 15px
       text-align: left
+      +md
+         flex: 0 0 400px
+      +sm
+         flex: 0 0 380px
+      +xs
+         flex: 0 1 auto
+         width: 380px
+      &:nth-child(1) ~ &
+         +xs
+            margin-top: 150px!important
+      &:nth-child(2) ~ &
+         +md
+            margin-top: 130px
       &:nth-child(3) ~ &
          margin-top: 150px
+      &:nth-child(4) ~ &
+         +md
+            margin-top: 180px
       &:not(:nth-child(3n))::after
          position: absolute
          top: -60px
          right: 0
          +sprite('arr-dotted')
          content: ''
+         +md
+            display: none
       &-icon
          position: relative
          z-index: 1
@@ -166,6 +233,10 @@
          display: inline-block
          vertical-align: middle
          padding: 0 40px 0 30px
+         +xs
+            padding: 0 20px
+         +r(374)
+            padding: 0 60px 0 20px
          &::after
             position: absolute
             top: -50px
@@ -187,11 +258,25 @@
    margin-top: 78px
    padding: 0 0 88px
    +cover
+   +md
+      background-size: 177%
+      background-position: 59% 50%
+      padding: 0
+      height: 525px
+   +sm
+      background-size: 220%
+      background-position: 66% 100%
+   +xs
+      background: 0
+      margin: 0
    &__form
       max-width: 398px
       padding: 25px 30px 30px
       background: $white
       box-shadow: 0 0 13px 2px rgba(0, 0, 0, 0.2)
+      +xs
+         max-width: none
+         padding: 20px 15px 25px
       &-title
          margin-bottom: 25px
          padding-bottom: 30px
@@ -200,6 +285,10 @@
          letter-spacing: 0.04em
          text-align: left
          border-bottom: 1px solid rgba($color-1, .3)
+         +xs
+            font-size: 20px
+            line-height: 26px
+            padding-bottom: 15px
       &-row
       
       &-field
@@ -210,6 +299,8 @@
 .anket
    position: relative
    padding: 90px 0
+   +xs
+      padding: 0
    &__container
       position: relative
       z-index: 3
@@ -223,6 +314,8 @@
          height: 15px
          background: url("../img/other/stripe-border.png") repeat 50% 50% / 15px 15px
          content: ''
+         +xs
+            display: none
       &::before
          top: 0
       &::after
@@ -230,6 +323,8 @@
       &-border
          +coverdiv
          pointer-events: none
+         +xs
+            display: none
          &::after, &::before
             position: absolute
             top: 15px
@@ -249,6 +344,10 @@
       padding: 87px 50px 126px
       background: $white
       z-index: 1
+      +sm
+         padding: 65px 15px 90px
+      +xs
+         padding: 30px 0 20px
       &::after
          position: absolute
          bottom: 85px
@@ -256,28 +355,54 @@
          z-index: 1
          +sprite('promo-zero')
          content: ''
+         +md
+            right: 10px
+         +sm
+            right: -20px
+            bottom: 60px
+            transform: scale(.5)
+         +xs
+            display: none
       &-inner
          padding: 30px 55px 40px
          box-shadow: 0 0 13px 2px rgba(0, 0, 0, 0.2)
+         +sm
+            padding: 30px 15px
       &-top-text
          margin-bottom: 30px
+   &__title
+      +xs
+         margin-bottom: 5px
    &__form
       &-title
          font-size: 23px
+         
       &-text
          margin-bottom: 25px
          padding-bottom: 22px
          border-bottom: 1px solid rgba($color-1, .3)
          text-align: center
+         +sm
+            padding-bottom: 15px
       &-row
          margin: 0 -25px 30px
+         +sm
+            margin: 0 -10px 20px
       &-field
          flex: 0 1 50%
          padding: 0 25px
+         +sm
+            padding: 0 15px
+         &:not(:last-child)
+            +xs
+               margin-bottom: 15px
+         
       &-send
          max-width: 340px
          margin: 0 auto
          text-align: center
+         +sm
+            margin-top: 30px
          
    &__bg
       position: absolute
@@ -295,35 +420,57 @@
 .promo
    padding: 75px 0 81px
    +cover
+   +sm
+      padding: 45px 0 50px
    &_mod
       padding: 75px 0 10px
    &__container
       display: flex
+      +sm
+         flex-wrap: wrap
    
    &__video-block
       width: calc(100% - 448px)
+      +md
+         width: calc(100% - 408px)
+      +sm
+         width: 100%
+         margin-bottom: 50px
+      +xs
+         margin-bottom: 30px
    &__get-video
+      +sm
+         margin: 0 auto
    &__top-text
       max-width: 670px
       padding: 10px 0 14px
       margin-bottom: 22px
       border-bottom: 1px solid rgba($color-1, .5)
+      +sm
+         max-width: none
+         text-align: center
       &_mod
          padding: 10px 0 0
          margin-bottom: 20px
          border: 0
    &__title
       margin-bottom: 3px
-      line-height: 32px
       text-align: left
+      +sm
+         text-align: center
    &__sub-title
       text-align: left
+      +sm
+         text-align: center
    &__descr
       max-width: 650px
       margin-bottom: 26px
       font-size: 17px
       line-height: 22px
       letter-spacing: 0.03em
+      +sm
+         max-width: none
+         text-align: center
    &__video
       &-wrap
          position: relative
@@ -331,6 +478,8 @@
          height: 407px
          border: 7px solid #eaeaea
          border-right: 0
+         +xs
+            height: 230px
          &_lg
             height: 472px
          &::after
@@ -342,6 +491,8 @@
             height: 75px
             background: url("../img/other/block-shadow.png")
             content: ''
+            +xs
+               display: none
          iframe
             +coverdiv
             width: 100%
@@ -352,6 +503,8 @@
          transform: translateY(-50%)
          left: 76px
          z-index: 1
+         +xs
+            display: none
          ul
             li
                position: relative
@@ -370,40 +523,80 @@
                   content: ''
 .view-catalog
    padding: 80px 0 89px
+   +xs
+      padding: 50px 0
+   &__container
    &__title
       max-width: 800px
       margin: 0 auto 30px
    &__block
       padding: 0 52px
       box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 8px 0 12px -5px rgba(0,0,0,.3), -8px 0 12px -5px rgba(0,0,0,.3)
+      +xs
+         padding: 0
+         box-shadow: none
    &__more
       text-align: center
    &__slider
       margin-bottom: 45px
+      +xs
+         margin-bottom: 0
+         padding-bottom: 80px
       .slider-btn
+         +xs
+            top: calc(100% - 40px)
          &_prev
             left: -75px
+            +md
+               left: -60px
+            +xs
+               left: 0
          &_next
             right: -80px
+            +md
+               right: -60px
+            +xs
+               right: 0
       &-item
 
 .testimonials
    padding: 80px 0 83px
    +cover
+   +xs
+      padding: 50px 0
    &__top
       margin-bottom: 30px
    &__slider
       margin-bottom: -8px
+      +md
+         margin-bottom: 20px
+      +xs
+         margin: 0 -5px
+         padding-bottom: 90px
       .slider-btn
          top: 45%
+         +sm
+            top: 50%
+         +xs
+            top: calc(100% - 50px)
          &_prev
             left: -33px
+            +md
+               left: 0
          &_next
             right: -16px
+            +md
+               right: 0
    &__item
       padding: 49px 0 0 30px
       +gpu
       +clr
+      +md
+         padding: 49px 0 0 70px
+      +sm
+         padding: 10px 70px
+      +xs
+         padding: 10px
       &-text
          position: relative
          z-index: 1
@@ -414,37 +607,60 @@
          background-color: #ffffff
          font-size: 16px
          line-height: 20px
+         +md
+            width: 515px
+            padding: 25px
+         +sm
+            width: 100%
+            float: none
+         +xs
+            padding: 20px 15px
          &-top
             margin-bottom: 24px
             padding-bottom: 21px
             border-bottom: 1px solid rgba($color-1, .3)
+            +xs
+               margin-bottom: 15px
+               padding-bottom: 10px
          &-bot
       &-title
          margin-bottom: 12px
          +f('os800', 26, 35)
          text-transform: uppercase
+         +xs
+            font-size: 20px
+            line-height: 32px
    
       &-descr
          
       &-name
          +f('os600', 21, 28)
          color: #00c3f8
+         +xs
+            font-size: 18px
+            line-height: 25px
    
       &-sub-title
          margin-bottom: 17px
          +f('os700')
          text-transform: uppercase
+         +xs
+            margin-bottom: 7px
    
       &-date
          margin-top: 10px
          color: #7f7f7f
       &-img-wrap
          float: left
-         width: 43.3%
+         width: calc(100% - 645px)
          +ratio(489, 429)
          top: -37px
          left: -19px
          +cover-img
+         +md
+            width: calc(100% - 560px)
+         +sm
+            display: none
          img
             +coverdiv
    &__action
@@ -458,24 +674,46 @@
          
 .teaser
    padding: 60px 0 81px
+   +xs
+      padding: 20px 0 50px
    &__container
    
    &__block
       padding-bottom: 30px
       box-shadow: 0 9px 0 0 white, 0 -9px 0 0 white, 8px 0 12px -5px rgba(0,0,0,.3), -8px 0 12px -5px rgba(0,0,0,.3)
+      +xs
+         padding-top: 15px
    &__title
       margin-bottom: 30px
+      +xs
+         margin-bottom: 15px
    &__slider
       padding: 0 53px
       margin-bottom: 30px
+      +xs
+         padding: 0 0 80px
+         margin-bottom: 20px
       .slider-btn
+         +xs
+            top: calc(100% - 30px)
          &_prev
             left: -28px
+            +md
+               left: -10px
+            +xs
+               left: 15px
          &_next
             right: -28px
+            +md
+               right: -10px
+            +xs
+               right: 15px
       &-img
          +ratio(1063, 459)
          +cover-img
+         &::before
+            +xs
+               padding-top: 70%
          img
             +coverdiv
             width: 100%
@@ -485,10 +723,22 @@
       text-align: center
    &__row
       padding: 0 84px
+      +md
+         padding: 0 34px
+      +xs
+         padding: 0 10px
    &__item
       flex: 0 1 33.33333%
       padding: 0 15px
       text-align: center
+      +sm
+         flex: 0 1 50%
+      &:nth-child(1) ~ &
+         +xs
+            padding: 30px 15px 0
+      &:nth-child(2) ~ &
+         +sm
+            padding: 50px 15px 0
       &:nth-child(3) ~ &
          padding: 50px 15px 0
       &-icon
@@ -511,6 +761,10 @@
          color: $color-1
          text-transform: uppercase
          +f('os700', 14, 32)
+         +xs
+            margin-top: 10px
+            margin-bottom: 10px
+            line-height: 20px
       &-descr
          max-width: 230px
          margin: 0 auto
@@ -521,6 +775,10 @@
 .express
    position: relative
    padding: 80px 0 88px
+   +sm
+      padding: 70px 0
+   +xs
+      padding: 60px 0 30px
    &__container
    &__block
       display: flex
@@ -528,16 +786,31 @@
       justify-content: space-between
       padding: 0 0 30px 50px
       box-shadow: -5px 5px 8px 0px hsla(0, 0%, 0%, 0.2)
+      +sm
+         padding: 0 0 30px 30px
+         align-items: center
+      +xs
+         padding: 0 0 25px 15px
       &-text
-         flex: 0 1 600px
+         flex: 0 1 630px
          padding-top: 60px
+         padding-right: 30px
+         +xs
+            flex: 0 1 auto
+            width: 100%
+            padding-right: 0
+            padding-top: 20px
       &-img
          top: -20px
          flex: 0 1 percentage(495 / 1170)
          +ratio(495, 402)
          +cover
+         +xs
+            display: none
          &::before
             padding-top: 87%
+            +sm
+               padding-top: 100%
    &__title
       max-width: 400px
       margin-bottom: 10px
@@ -548,11 +821,16 @@
       line-height: 25px
       font-size: 17px
       letter-spacing: .03em
+   &__btn
+      +xs
+         font-size: 17px
 
 .stages
    padding: 85px 0 90px
    counter-reset: stage-count
    +cover
+   +xs
+      padding: 45px 0 40px
    &__top
       margin-bottom: 20px
       text-align: center
@@ -561,11 +839,24 @@
       line-height: 32px
    &__row
       margin: 0 -15px 80px
+      +sm
+         flex-direction: column
+      +xs
+         margin: 0 -15px 50px
    &__item
       position: relative
       flex: 0 1 33.33333%
       padding: 0 15px
       counter-increment: stage-count
+      +sm
+         flex: 0 1 auto
+         padding: 0 15px 0 30px
+      +xs
+         padding: 0 15px 0 20px
+      &:not(:last-child)
+         +sm
+            margin-bottom: 50px
+         
       &::before
          position: absolute
          top: 36px
@@ -574,6 +865,12 @@
          height: 1px
          background: rgba($color-1, .3)
          content: ''
+         +sm
+            width: auto
+            right: 15px
+            left: 70px
+         +xs
+            left: 50px
       &::after
          position: absolute
          top: 70px
@@ -582,6 +879,10 @@
          width: 1px
          height: 88%
          content: ''
+         +sm
+            left: 35px
+         +xs
+            left: 20px
       &-count
          position: absolute
          top: 10px
@@ -594,6 +895,15 @@
          box-shadow: 5px 5px 13px 2px rgba(0, 0, 0, 0.15)
          background-color: #ffffff
          border-radius: 50%
+         +md
+            transform: scale(.8)
+         +sm
+            transform: scale(1)
+            left: 10px
+         +xs
+            transform: scale(.8)
+            left: 0
+            top: 20px
          &::before
             display: block
             width: 40px
@@ -613,12 +923,24 @@
          text-transform: uppercase
          color: #0057ae
          +f('os700', 16, 24)
+         +md
+            padding: 0 0 10px 20px
+         +sm
+            padding: 0 0 10px 40px
+         +xs
+            padding: 0
    
       &-descr
          padding: 0 20px 0 40px
          color: #7f7f7f
          font-size: 15px
          line-height: 20px
+         +md
+            padding: 0 20px
+         +sm
+            padding: 0 20px 0 40px
+         +xs
+            padding: 0 20px 0 30px
          &:not(:last-child)
             margin-bottom: 20px
       
@@ -630,19 +952,41 @@
    &__inner
       padding: 30px 30px 60px
       box-shadow: 0 0 13px 2px rgba(0,0,0,.2)
+      +xs
+         box-shadow: none
+         padding: 0
    &__title
       max-width: 740px
       margin: 0 auto 30px
       line-height: 44px
+   &__row
+      +sm
+         flex-wrap: wrap
+      +xs
+         flex-direction: row
    &__item
       position: relative
       flex: 0 1 50%
       padding: 0 15px
+      +sm
+         flex: 0 1 100%
+      +xs
+         padding: 40px 15px 0
+         text-align: center
+      &:nth-child(1) ~ &
+         +sm
+            margin-top: 30px
       &:nth-child(2) ~ &
          margin-top: 30px
       &-label
          top: 27px
          left: 13px
+         +xs
+            right: 15px
+            top: 0
+            min-width: 0
+            padding: 8px 15px
+            box-shadow: 0px 7px 7px 1px rgba(0,0,0,.45)
       &-img
          +ratio(540, 351)
          +cover
@@ -651,15 +995,30 @@
          bottom: 34px
          left: 50%
          transform: translateX(-50%)
+         +xs
+            position: static
+            transform: none
+            margin-top: 10px
 
 .contact
    padding: 30px 0 90px
+   +xs
+      padding: 30px 0 50px
    &__map
       +coverdiv
+      +xs
+         order: -1
+         position: static
+         height: 300px
+         margin-bottom: 30px
       &-wrap
          position: relative
          height: 448px
          margin-bottom: 40px
+         +xs
+            height: auto
+            display: flex
+            flex-direction: column
       &-container
          position: relative
          max-width: 1170px
@@ -672,38 +1031,64 @@
       padding: 26px
       background: $white
       box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.2)
+      +md
+         left: 15px
+      +xs
+         position: static
+         width: 100%
+         padding: 15px
       &-img-wrap
          height: 168px
          margin-bottom: 24px
    &__text-container
       margin-bottom: 22px
    &__ask
+      +md
+         text-align: center
       &-container
       &-inner
          padding: 30px 50px 50px
          box-shadow: -5px 5px 8px 0 rgba(0,0,0,.2)
+         +xs
+            padding: 30px 15px 40px
       &-row
          align-items: center
+         +md
+            display: block
       &-col
          flex: 0 1 50%
          padding: 0 15px
+         +md
+            flex: 0 1 auto
+            width: 100%
       &-title
          margin-bottom: 10px
          text-align: left
+         +md
+            text-align: center
       &-descr
          font-size: 17px
          line-height: 25px
+         +md
+            margin-bottom: 15px
+         
 
 .faq
    padding: 80px 0
    +cover
+   +xs
+      padding: 40px 0
    &__title
       margin-bottom: 35px
+      +xs
+         margin-bottom: 20px
    &__item
       font-size: 15px
       line-height: 20px
       &:not(:last-child)
          margin-bottom: 40px
+         +xs
+            margin-bottom: 30px
       &-title
          margin-bottom: 15px
          padding-bottom: 16px

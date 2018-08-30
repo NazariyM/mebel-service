@@ -23,10 +23,7 @@ body
    display: flex
    flex-wrap: wrap
    margin: 0 -15px
-   +md
-      justify-content: center
-      margin: 0 -10px
-   +sm
+   +xs
       flex-direction: column
       
 .col
@@ -60,11 +57,17 @@ body
    +f('os800', 35, 46)
    text-transform: uppercase
    text-align: center
+   +sm
+      font-size: 26px
+      line-height: 34px
    span
       color: #0057ae
 .title-md
    @extend .title
    font-size: 21px
+   +sm
+      font-size: 18px
+      line-height: 24px
 
 .btn
    display: inline-block
@@ -83,11 +86,15 @@ body
       padding: 16px 30px
       font-size: 18px
       border-radius: 27px
+      +xs
+         min-width: 250px
+         padding: 15px
+         font-size: 16px
    &_blue
       color: $white
       background: $color-1
-      
       &:hover
+         background: darken($color-1, 8)
    &_black
       color: $black
       border-color: $black
