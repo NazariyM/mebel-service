@@ -1,3 +1,57 @@
-@import helpers/all
+//@import helpers/all
 
 .footer
+   &__container
+      display: flex
+      justify-content: space-between
+   &__info
+      padding: 40px 0
+      background-color: #333333
+      color: $white
+      
+      &-col
+         flex: 0 1 300px
+         &:nth-child(1)
+            flex: 0 1 270px
+         &:nth-child(2)
+            margin-left: 30px
+            
+      &-title
+         margin-bottom: 15px
+         padding-bottom: 21px
+         line-height: 20px
+         +f('os800')
+         text-transform: uppercase
+         border-bottom: 1px solid rgba($white, .3)
+      &-list
+         li
+            &:not(:last-child)
+               margin-bottom: 8px
+            a
+               +trs
+               letter-spacing: .03em
+               &:hover
+                  color: $color-1
+   &__bottom
+      padding: 20px 0
+      font-size: 14px
+      line-height: 22px
+      background-color: #f0f0f0
+   &__logo
+      flex: 0 0 198px
+      margin-right: 40px
+   &__copy
+   
+   &__quote
+      position: relative
+      flex: 0 0 495px
+      margin-left: auto
+      +f('os700i')
+   
+      &::before
+         position: absolute
+         top: -5px
+         left: 5px
+         z-index: 0
+         +sprite('right-quote')
+         content: ''

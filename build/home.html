@@ -23,7 +23,7 @@
             <a class="logo header__logo" href="#!">
               <img src="img/other/logo.jpg" alt="img" title="" />
             </a>
-            <div class="contact-block header__contact">
+            <div class="contact-block contact-block_header">
               <div class="contact-block__item">
                 <div class="contact-block__item-icon-wrap">
                   <div class="contact-block__item-icon contact-block__item-icon_loc"></div>
@@ -83,64 +83,100 @@
       <!--END header-->
       <div class="main">
         <!--begin screen-->
-        <!--+b.SECTION.screen-->
-        <!--	+e.inner+e.slider-->
+        <section class="screen">
+          <div class="screen__bg" style="background-image: url(img/bg/screen_bg.jpg)"></div>
+          <div class="screen__container container">
+            <h2 class="screen__title">ПРОИЗВОДСТВО КУХОНЬ №1 в г.ЙОШКАР-ОЛА от 10 ДНЕЙ С ГАРАНТИЕЙ до 5 ЛЕТ</h2>
+            <div class="download-block screen__download-block">
+              <h3 class="download-block__title">Скачайте подборку материалов - бесплатно!</h3>
+              <ul class="download-block__list">
+                <li>5 трендов дизайна кухонных гарнитуров в 2018г.</li>
+                <li>Все об материалах для Кухни.
+                  <br>На чем можно экономить, на чем категорически нельзя.</li>
+                <li>Каталог наших лучших работ
+                  <br>2008-2018 г. с описанием и ценами.</li>
+              </ul>
+              <div class="download-block__social">
+                <h5 class="download-block__sub-title">КУДА ОТПРАВИТЬ ?</h5>
+                <div class="download-block__social-inner">
+                  <a class="download-block__social-link icon-viber" href="#!"></a>
+                  <a class="download-block__social-link icon-whatsapp" href="#!"></a>
+                  <a class="download-block__social-link icon-telegram" href="#!"></a>
+                  <a class="download-block__social-link icon-facebook" href="#!"></a>
+                  <a class="download-block__social-link icon-tel-btn" href="#!"></a>
+                </div>
+              </div>
+              <form class="download-block__form" action="#!" method="POST">
+                <h5 class="download-block__sub-title">На какой номер отправить ?</h5>
+                <div class="form-field download-block__form-field">
+                  <input class="form-field__input js-tel-input" type="text" name="" placeholder="+7(---) --- -- --" required="required" />
+                </div>
+                <div class="form-send download-block__form-send">
+                  <input class="form-send__btn btn btn_blue btn_md" type="submit" value="Получить бесплатно" />
+                  <p class="form-send__text">Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"</p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
         <!--end screen-->
         <!--begin benefits-->
         <section class="benefits">
           <div class="benefits__container container">
-            <h2 class="benefits__title title">Преимущества работы с нами</h2>
-            <div class="benefits__row row">
-              <div class="benefits__item">
-                <div class="benefits__item-icon-wrap">
-                  <div class="benefits__item-icon benefits__item-icon_1"></div>
+            <div class="benefits__block">
+              <h2 class="benefits__title title">Преимущества работы с нами</h2>
+              <div class="benefits__row row">
+                <div class="benefits__item">
+                  <div class="benefits__item-icon-wrap">
+                    <div class="benefits__item-icon benefits__item-icon_1"></div>
+                  </div>
+                  <h5 class="benefits__item-title">ЛУЧШИЕ ЦЕНЫ НА РЫНке</h5>
+                  <p class="benefits__item-descr">Производим от Премиум до Эконом класса. Без наценки магазина, напрямую с производства. Сэкономь до 20% от рыночных цен.</p>
                 </div>
-                <h5 class="benefits__item-title">ЛУЧШИЕ ЦЕНЫ НА РЫНке</h5>
-                <p class="benefits__item-descr">Производим от Премиум до Эконом класса. Без наценки магазина, напрямую с производства. Сэкономь до 20% от рыночных цен.</p>
-              </div>
-              <div class="benefits__item">
-                <div class="benefits__item-icon-wrap">
-                  <div class="benefits__item-icon benefits__item-icon_2"></div>
+                <div class="benefits__item">
+                  <div class="benefits__item-icon-wrap">
+                    <div class="benefits__item-icon benefits__item-icon_2"></div>
+                  </div>
+                  <h5 class="benefits__item-title">Наивысшее качество</h5>
+                  <p class="benefits__item-descr">Средний стаж каждого сотрудника компании «МебельСервис», более 10 лет в индустрии мебели. Все сотрудники получают оплату, только после 100% сдачи заказа.</p>
                 </div>
-                <h5 class="benefits__item-title">Наивысшее качество</h5>
-                <p class="benefits__item-descr">Средний стаж каждого сотрудника компании «МебельСервис», более 10 лет в индустрии мебели. Все сотрудники получают оплату, только после 100% сдачи заказа.</p>
-              </div>
-              <div class="benefits__item">
-                <div class="benefits__item-icon-wrap">
-                  <div class="benefits__item-icon benefits__item-icon_3"></div>
+                <div class="benefits__item">
+                  <div class="benefits__item-icon-wrap">
+                    <div class="benefits__item-icon benefits__item-icon_3"></div>
+                  </div>
+                  <h5 class="benefits__item-title">РАссрочка
+                    <span>0%</span> на 6 месяцев</h5>
+                  <p class="benefits__item-descr benefits__item-descr_mod">Без участия банка, без справок, оформление по одному документу. Возможно оформление кредита, через банк, сроком до 3-х лет.</p>
                 </div>
-                <h5 class="benefits__item-title">РАссрочка
-                  <span>0%</span> на 6 месяцев</h5>
-                <p class="benefits__item-descr">Без участия банка, без справок, оформление по одному документу. Возможно оформление кредита, через банк, сроком до 3-х лет.</p>
-              </div>
-              <div class="benefits__item">
-                <div class="benefits__item-icon-wrap">
-                  <div class="benefits__item-icon benefits__item-icon_4"></div>
+                <div class="benefits__item">
+                  <div class="benefits__item-icon-wrap">
+                    <div class="benefits__item-icon benefits__item-icon_4"></div>
+                  </div>
+                  <h5 class="benefits__item-title">ОПЛАТА ЛЮБЫМ УДОБНЫМ СПОСОБОМ</h5>
+                  <p class="benefits__item-descr">Наличный расчет, банковская карта, оплата на расчетный счет компании при работе с юр. лицами.</p>
                 </div>
-                <h5 class="benefits__item-title">ОПЛАТА ЛЮБЫМ УДОБНЫМ СПОСОБОМ</h5>
-                <p class="benefits__item-descr">Наличный расчет, банковская карта, оплата на расчетный счет компании при работе с юр. лицами.</p>
-              </div>
-              <div class="benefits__item">
-                <div class="benefits__item-icon-wrap">
-                  <div class="benefits__item-icon benefits__item-icon_5"></div>
+                <div class="benefits__item">
+                  <div class="benefits__item-icon-wrap">
+                    <div class="benefits__item-icon benefits__item-icon_5"></div>
+                  </div>
+                  <h5 class="benefits__item-title">ТЕХНИКА В ПОДАРОК</h5>
+                  <p class="benefits__item-descr">При покупке кухни, Вы получаете технику в подарок.</p>
                 </div>
-                <h5 class="benefits__item-title">ТЕХНИКА В ПОДАРОК</h5>
-                <p class="benefits__item-descr">При покупке кухни, Вœœœы получаете технику в подарок.</p>
-              </div>
-              <div class="benefits__item">
-                <div class="benefits__item-icon-wrap">
-                  <div class="benefits__item-icon benefits__item-icon_6"></div>
+                <div class="benefits__item">
+                  <div class="benefits__item-icon-wrap">
+                    <div class="benefits__item-icon benefits__item-icon_6"></div>
+                  </div>
+                  <h5 class="benefits__item-title">10 лет гарантии от производителя</h5>
+                  <p class="benefits__item-descr">Послегарантийное обслуживание, прописывается в договоре.</p>
                 </div>
-                <h5 class="benefits__item-title">10 лет гарантии от производителя</h5>
-                <p class="benefits__item-descr">Послегарантийное обслуживание, прописывается в договоре.</p>
               </div>
+              <a class="benefits__more-btn btn btn_blue btn_lg" href="#!">Узнать подробнее</a>
             </div>
-            <a class="benefits__more-btn btn btn_blue btn_lg" href="#!">Узнать подробнее</a>
           </div>
         </section>
         <!--end benefits-->
         <!--begin team-poster-->
-        <section class="team-poster">
+        <section class="team-poster" style="background-image: url(img/bg/stripes_bg.png)">
           <div class="team-poster__container container">
             <div class="team-poster__block">
               <div class="team-poster__top-text">
@@ -228,7 +264,9 @@
         <section class="request" style="background-image: url(img/bg/request_bg.png)">
           <div class="request__container container">
             <form class="request__form" action="#!" method="POST">
-              <h3 class="request__form-title title">ОСТАВЬТЕ ЗАЯВКУ НА БЕСПЛАТНОЕ ТАКСИ ДО «МЕБЕЛЬсервис»</h3>
+              <h3 class="request__form-title title">ОСТАВЬТЕ ЗАЯВКУ
+                <br>НА БЕСПЛАТНОЕ ТАКСИ
+                <br>ДО «МЕБЕЛЬсервис»</h3>
               <div class="form-field request__form-field">
                 <label class="form-field__label">
                   <span>Ваше Имя</span>
@@ -242,7 +280,7 @@
                 </label>
               </div>
               <div class="form-send request__form-send">
-                <input class="form-send__btn btn btn_blue btn_lg" type="submit" value="Получить видео" />
+                <input class="form-send__btn btn btn_blue btn_lg" type="submit" value="Отправить заявку" />
                 <p class="form-send__text">Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"</p>
               </div>
             </form>
@@ -295,11 +333,12 @@
                   </div>
                 </form>
                 <div class="form-send anket__form-send">
-                  <input class="form-send__btn btn btn_blue btn_lg" type="submit" value="Получить видео" />
+                  <input class="form-send__btn btn btn_blue btn_lg" type="submit" value="Рассчитать" />
                   <p class="form-send__text">Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"</p>
                 </div>
               </div>
             </div>
+            <div class="anket__container-border"></div>
           </div>
           <div class="anket__bg anket__bg_l" style="background-image: url(img/bg/anket_bg_l.png)"></div>
           <div class="anket__bg anket__bg_r" style="background-image: url(img/bg/anket_bg_r.png)"></div>
@@ -324,13 +363,14 @@
                     <li>Смотри видео</li>
                   </ul>
                 </div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/r5SeqDeSsGY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                <iframe src="https://www.youtube.com/embed/r5SeqDeSsGY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
               </div>
             </div>
             <div class="get-video promo__get-video">
               <div class="get-video__top">
                 <h4 class="get-video__title title-md">скачайте каталог + видео</h4>
-                <p class="get-video__descr">Начните выбор кухонного гарнитура, не выходя из дома, получив бесплатный каталог.</p>
+                <p class="get-video__descr">Начните выбор кухонного гарнитура, не
+                  <br>выходя из дома, получив бесплатный каталог.</p>
                 <div class="get-video__img-wrap">
                   <img src="img/content/journal_img.png" alt="image" title="" />
                 </div>
@@ -342,7 +382,7 @@
                     <input class="form-field__input js-tel-input" type="text" name="" placeholder="+7(---) --- -- --" required="required" />
                   </label>
                 </div>
-                <div class="form-send promo__form-send">
+                <div class="form-send get-video__form-send">
                   <input class="form-send__btn btn btn_blue btn_lg" type="submit" value="Получить видео" />
                   <p class="form-send__text">Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"</p>
                 </div>
@@ -351,11 +391,868 @@
           </div>
         </section>
         <!--end promo-->
+        <!--begin view-catalog-->
+        <section class="view-catalog">
+          <div class="view-catalog__container container">
+            <div class="view-catalog__block">
+              <h2 class="view-catalog__title title">НАЙДИТЕ ПОДХОДЯЩИЙ КУХОННЫЙ ГАРНИТУР ПО СВОЕЙ ПЛАНИРОВКЕ</h2>
+              <div class="view-catalog__slider">
+                <div class="view-catalog__slider-item">
+                  <div class="view-block">
+                    <div class="view-block__img">
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="view-block__nav">
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="view-catalog__slider-item">
+                  <div class="view-block">
+                    <div class="view-block__img">
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="view-block__nav">
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="view-catalog__slider-item">
+                  <div class="view-block">
+                    <div class="view-block__img">
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                      <div class="view-block__img-item">
+                        <div class="view-block__img-wrap">
+                          <img src="img/content/view-block_img.jpg" alt="image" title="" />
+                          <span class="view-block__img-label text-label text-label_blue">ул. Людникова 154</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="view-block__nav">
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                      <div class="view-block__nav-item">
+                        <img src="img/content/view-block_img-sm.jpg" alt="image" title="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="view-catalog__more">
+                <a class="view-catalog__more-btn btn btn_blue btn_lg" href="#!">Посмотреть каталог</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--end view-catalog-->
+        <!--begin testimonials-->
+        <section class="testimonials" style="background-image: url(img/bg/stripes_bg.png)">
+          <div class="testimonials__container container">
+            <div class="testimonials__top">
+              <h2 class="testimonials__title title">анкеты - отзывы</h2>
+              <h4 class="testimonials__sub-title title-md">которые заполняет каждый клиент после установки кухни</h4>
+            </div>
+            <div class="testimonials__slider slider-default slider-btn-default">
+              <div class="testimonials__item">
+                <div class="testimonials__item-text">
+                  <div class="testimonials__item-text-top">
+                    <div class="testimonials__item-title">Белобородова а. Д.</div>
+                    <p class="testimonials__item-descr">Заказывали в компании «МебельСервис»</p>
+                    <div class="testimonials__item-name">Кухонный гарнитур</div>
+                  </div>
+                  <div class="testimonials__item-text-bot">
+                    <div class="testimonials__item-sub-title">ОТЗЫВ</div>
+                    <p class="testimonials__item-descr">Выражаю благодарность за качественную сборку и подробную консультацию по выбору кухонного гарнитура.</p>
+                    <div class="testimonials__item-date">04.05.2018г.</div>
+                  </div>
+                </div>
+                <div class="testimonials__item-img-wrap">
+                  <img src="img/content/testimonials_img.png" alt="image" title="" />
+                </div>
+              </div>
+              <div class="testimonials__item">
+                <div class="testimonials__item-text">
+                  <div class="testimonials__item-text-top">
+                    <div class="testimonials__item-title">Белобородова а. Д.</div>
+                    <p class="testimonials__item-descr">Заказывали в компании «МебельСервис»</p>
+                    <div class="testimonials__item-name">Кухонный гарнитур</div>
+                  </div>
+                  <div class="testimonials__item-text-bot">
+                    <div class="testimonials__item-sub-title">ОТЗЫВ</div>
+                    <p class="testimonials__item-descr">Выражаю благодарность за качественную сборку и подробную консультацию по выбору кухонного гарнитура.</p>
+                    <div class="testimonials__item-date">04.05.2018г.</div>
+                  </div>
+                </div>
+                <div class="testimonials__item-img-wrap">
+                  <img src="img/content/testimonials_img.png" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="testimonials__action">
+              <a class="testimonials__action-btn btn btn_blue btn_lg" href="#!">Оставить отзыв</a>
+              <p class="testimonials__action-descr">Отзыв попадает лично Директору</p>
+            </div>
+          </div>
+        </section>
+        <!--end testimonials-->
+        <!--begin promo-->
+        <section class="promo promo_mod">
+          <div class="promo__container container">
+            <div class="promo__video-block">
+              <div class="promo__top-text promo__top-text_mod">
+                <h2 class="promo__title title">ДАРИМ СКИДКУ -20% НА ЗАМЕРЕ</h2>
+              </div>
+              <p class="promo__descr">Посмотрите видео и узнайте, 4 главных критерия выбора кухонного гарнитура и что будет после просмотра каталога?</p>
+              <div class="promo__video-wrap promo__video-wrap_lg">
+                <iframe src="https://www.youtube.com/embed/r5SeqDeSsGY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+              </div>
+            </div>
+            <div class="get-video promo__get-video">
+              <div class="get-video__top get-video__top_mod">
+                <h4 class="get-video__title title-md">ЗАПИШИТЕСЬ НА ЗАМЕР
+                  <br>И ПОЛУЧИТЕ ПОДАРОК
+                  <br>ОТ ДИЗАЙНЕРА</h4>
+              </div>
+              <form class="get-video__form" action="#!" method="POST">
+                <div class="form-field get-video__form-field">
+                  <label class="form-field__label">
+                    <span>Ваш номер телефона</span>
+                    <input class="form-field__input js-tel-input" type="text" name="" placeholder="+7(---) --- -- --" required="required" />
+                  </label>
+                </div>
+                <div class="form-field get-video__form-field">
+                  <label class="form-field__label">
+                    <span>введите адрес</span>
+                    <input class="form-field__input" type="text" name="" placeholder="ул. Пушкинская 123, д 23, кв. 65" required="required" />
+                  </label>
+                </div>
+                <div class="form-field get-video__form-field">
+                  <label class="form-field__label">
+                    <span>удобное время принять дизайнера</span>
+                    <input class="form-field__input" type="text" name="" placeholder="27 июля с 17:00 до 18:00" required="required" />
+                  </label>
+                </div>
+                <div class="form-send get-video__form-send">
+                  <input class="form-send__btn btn btn_blue btn_lg" type="submit" value="Получить видео" />
+                  <p class="form-send__text">Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"</p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!--end promo-->
+        <!--begin teaser-->
+        <section class="teaser">
+          <div class="teaser__container container">
+            <div class="teaser__block">
+              <h2 class="teaser__title title">наши гарнитуры</h2>
+              <div class="c-tabs teaser__tabs">
+                <div class="c-tabs__nav">
+                  <button class="c-tabs__btn is-active" type="button">Маленькие кухни / хрущевки</button>
+                  <button class="c-tabs__btn" type="button">Кухня гостинная / в студию</button>
+                  <button class="c-tabs__btn" type="button">Современные кухни</button>
+                  <button class="c-tabs__btn" type="button">Угловые кухни</button>
+                  <button class="c-tabs__btn" type="button">Стиль ЧУ</button>
+                </div>
+                <div class="c-tabs__for">
+                  <div class="c-tabs__tab">
+                    <div class="teaser__slider slider-default">
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                    </div>
+                    <div class="teaser__btn-wrap">
+                      <a class="teaser__btn btn btn_blue btn_lg" href="#!">Рассчитать кухню</a>
+                    </div>
+                    <div class="teaser__row row">
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_pantone"></div>
+                        </div>
+                        <h6 class="teaser__item-title">Более 1000 цветовых решений</h6>
+                        <p class="teaser__item-descr">Изготовим гарнитур любого оттенка и стиля</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_factory"></div>
+                        </div>
+                        <h6 class="teaser__item-title">ФАБРИЧНОЕ ПРОИЗВОДСТВО ФАСАДОВ</h6>
+                        <p class="teaser__item-descr">Закупаем фасады в России и Италии</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_drop"></div>
+                        </div>
+                        <h6 class="teaser__item-title">КОРПУС КУХНИ ИЗ ЛДСП</h6>
+                        <p class="teaser__item-descr">Создаем каркас гарнитура из влагостойкого материала</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_home"></div>
+                        </div>
+                        <h6 class="teaser__item-title">АВСТРИЙКАЯ ФУРНИТУРА BLUM</h6>
+                        <p class="teaser__item-descr">Используем долговечные и надёжные комплектующие</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_truck"></div>
+                        </div>
+                        <h6 class="teaser__item-title">БЕСПЛАТНАЯ ДОСТАВКА</h6>
+                        <p class="teaser__item-descr">Доставим кухню в любую точку Удмурдии</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_kitchen-sm"></div>
+                        </div>
+                        <h6 class="teaser__item-title">ПРОИЗВОДИМ ГАРНИТУРЫ «ПОД КЛЮЧ»</h6>
+                        <p class="teaser__item-descr">Вы получаете кухню, полностью введенную в эксплуатацию</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-tabs__tab">
+                    <div class="teaser__slider slider-default">
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                    </div>
+                    <div class="teaser__btn-wrap">
+                      <a class="teaser__btn btn btn_blue btn_lg" href="#!">Рассчитать кухню</a>
+                    </div>
+                    <div class="teaser__row row">
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_pantone"></div>
+                        </div>
+                        <h6 class="teaser__item-title">Более 1000 цветовых решений</h6>
+                        <p class="teaser__item-descr">Изготовим гарнитур любого оттенка и стиля</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_factory"></div>
+                        </div>
+                        <h6 class="teaser__item-title">ФАБРИЧНОЕ ПРОИЗВОДСТВО ФАСАДОВ</h6>
+                        <p class="teaser__item-descr">Закупаем фасады в России и Италии</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_drop"></div>
+                        </div>
+                        <h6 class="teaser__item-title">КОРПУС КУХНИ ИЗ ЛДСП</h6>
+                        <p class="teaser__item-descr">Создаем каркас гарнитура из влагостойкого материала</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_home"></div>
+                        </div>
+                        <h6 class="teaser__item-title">АВСТРИЙКАЯ ФУРНИТУРА BLUM</h6>
+                        <p class="teaser__item-descr">Используем долговечные и надёжные комплектующие</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_truck"></div>
+                        </div>
+                        <h6 class="teaser__item-title">БЕСПЛАТНАЯ ДОСТАВКА</h6>
+                        <p class="teaser__item-descr">Доставим кухню в любую точку Удмурдии</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_kitchen-sm"></div>
+                        </div>
+                        <h6 class="teaser__item-title">ПРОИЗВОДИМ ГАРНИТУРЫ «ПОД КЛЮЧ»</h6>
+                        <p class="teaser__item-descr">Вы получаете кухню, полностью введенную в эксплуатацию</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-tabs__tab">
+                    <div class="teaser__slider slider-default">
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                    </div>
+                    <div class="teaser__btn-wrap">
+                      <a class="teaser__btn btn btn_blue btn_lg" href="#!">Рассчитать кухню</a>
+                    </div>
+                    <div class="teaser__row row">
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_pantone"></div>
+                        </div>
+                        <h6 class="teaser__item-title">Более 1000 цветовых решений</h6>
+                        <p class="teaser__item-descr">Изготовим гарнитур любого оттенка и стиля</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_factory"></div>
+                        </div>
+                        <h6 class="teaser__item-title">ФАБРИЧНОЕ ПРОИЗВОДСТВО ФАСАДОВ</h6>
+                        <p class="teaser__item-descr">Закупаем фасады в России и Италии</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_drop"></div>
+                        </div>
+                        <h6 class="teaser__item-title">КОРПУС КУХНИ ИЗ ЛДСП</h6>
+                        <p class="teaser__item-descr">Создаем каркас гарнитура из влагостойкого материала</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_home"></div>
+                        </div>
+                        <h6 class="teaser__item-title">АВСТРИЙКАЯ ФУРНИТУРА BLUM</h6>
+                        <p class="teaser__item-descr">Используем долговечные и надёжные комплектующие</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_truck"></div>
+                        </div>
+                        <h6 class="teaser__item-title">БЕСПЛАТНАЯ ДОСТАВКА</h6>
+                        <p class="teaser__item-descr">Доставим кухню в любую точку Удмурдии</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_kitchen-sm"></div>
+                        </div>
+                        <h6 class="teaser__item-title">ПРОИЗВОДИМ ГАРНИТУРЫ «ПОД КЛЮЧ»</h6>
+                        <p class="teaser__item-descr">Вы получаете кухню, полностью введенную в эксплуатацию</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-tabs__tab">
+                    <div class="teaser__slider slider-default">
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                    </div>
+                    <div class="teaser__btn-wrap">
+                      <a class="teaser__btn btn btn_blue btn_lg" href="#!">Рассчитать кухню</a>
+                    </div>
+                    <div class="teaser__row row">
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_pantone"></div>
+                        </div>
+                        <h6 class="teaser__item-title">Более 1000 цветовых решений</h6>
+                        <p class="teaser__item-descr">Изготовим гарнитур любого оттенка и стиля</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_factory"></div>
+                        </div>
+                        <h6 class="teaser__item-title">ФАБРИЧНОЕ ПРОИЗВОДСТВО ФАСАДОВ</h6>
+                        <p class="teaser__item-descr">Закупаем фасады в России и Италии</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_drop"></div>
+                        </div>
+                        <h6 class="teaser__item-title">КОРПУС КУХНИ ИЗ ЛДСП</h6>
+                        <p class="teaser__item-descr">Создаем каркас гарнитура из влагостойкого материала</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_home"></div>
+                        </div>
+                        <h6 class="teaser__item-title">АВСТРИЙКАЯ ФУРНИТУРА BLUM</h6>
+                        <p class="teaser__item-descr">Используем долговечные и надёжные комплектующие</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_truck"></div>
+                        </div>
+                        <h6 class="teaser__item-title">БЕСПЛАТНАЯ ДОСТАВКА</h6>
+                        <p class="teaser__item-descr">Доставим кухню в любую точку Удмурдии</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_kitchen-sm"></div>
+                        </div>
+                        <h6 class="teaser__item-title">ПРОИЗВОДИМ ГАРНИТУРЫ «ПОД КЛЮЧ»</h6>
+                        <p class="teaser__item-descr">Вы получаете кухню, полностью введенную в эксплуатацию</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-tabs__tab">
+                    <div class="teaser__slider slider-default">
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                      <div class="teaser__slider-img">
+                        <img src="img/content/teaser_img.jpg" alt="image" title="" />
+                      </div>
+                    </div>
+                    <div class="teaser__btn-wrap">
+                      <a class="teaser__btn btn btn_blue btn_lg" href="#!">Рассчитать кухню</a>
+                    </div>
+                    <div class="teaser__row row">
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_pantone"></div>
+                        </div>
+                        <h6 class="teaser__item-title">Более 1000 цветовых решений</h6>
+                        <p class="teaser__item-descr">Изготовим гарнитур любого оттенка и стиля</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_factory"></div>
+                        </div>
+                        <h6 class="teaser__item-title">ФАБРИЧНОЕ ПРОИЗВОДСТВО ФАСАДОВ</h6>
+                        <p class="teaser__item-descr">Закупаем фасады в России и Италии</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_drop"></div>
+                        </div>
+                        <h6 class="teaser__item-title">КОРПУС КУХНИ ИЗ ЛДСП</h6>
+                        <p class="teaser__item-descr">Создаем каркас гарнитура из влагостойкого материала</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_home"></div>
+                        </div>
+                        <h6 class="teaser__item-title">АВСТРИЙКАЯ ФУРНИТУРА BLUM</h6>
+                        <p class="teaser__item-descr">Используем долговечные и надёжные комплектующие</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_truck"></div>
+                        </div>
+                        <h6 class="teaser__item-title">БЕСПЛАТНАЯ ДОСТАВКА</h6>
+                        <p class="teaser__item-descr">Доставим кухню в любую точку Удмурдии</p>
+                      </div>
+                      <div class="teaser__item">
+                        <div class="teaser__item-icon-wrap">
+                          <div class="teaser__item-icon teaser__item-icon_kitchen-sm"></div>
+                        </div>
+                        <h6 class="teaser__item-title">ПРОИЗВОДИМ ГАРНИТУРЫ «ПОД КЛЮЧ»</h6>
+                        <p class="teaser__item-descr">Вы получаете кухню, полностью введенную в эксплуатацию</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--end teaser-->
+        <!--begin express-->
+        <section class="express section-lines">
+          <div class="express__container container">
+            <div class="express__block">
+              <div class="express__block-text">
+                <h2 class="express__title title">экспресс расчет
+                  <br>в течении 15 минут</h2>
+                <p class="express__descr">Если вы уже заказывали эскиз кухонного гарнитура в другом месте, отправьте нам чертежи с размерами, мы сделаем экспресс расчет за 15 мин с Более выгодным предложением</p>
+                <button class="express__btn btn btn_blue btn_lg" type="button">Получить экспресс расчет</button>
+              </div>
+              <div class="express__block-img" style="background-image: url(img/content/express_img.jpg)"></div>
+            </div>
+          </div>
+        </section>
+        <!--end express-->
+        <!--begin stages-->
+        <section class="stages" style="background-image: url(img/bg/stripes_bg.png)">
+          <div class="stages__container container">
+            <div class="stages__top">
+              <h2 class="stages__title title">ЧТО ДЕЛАЕТ КОМАНДА «МЕБЕЛЬ СЕРВИС»</h2>
+              <h4 class="stages__sub-title title-md">ДЛЯ ТОГО ЧТОБЫ ВЫ ПОЛУЧИЛИ НАИВЫСШЕЕ КАЧЕСТВО И ЧУВСТВО ВОСТОРГА ОТ ВАШЕЙ КУХНИ</h4>
+            </div>
+            <div class="stages__row row">
+              <div class="stages__item">
+                <div class="stages__item-count"></div>
+                <h6 class="stages__item-title">каталог кухонных гарнитуров</h6>
+                <p class="stages__item-descr">Мы предполагаем, что принципиальный интерес к выбору кухонного гарнитура у Вас есть, поэтому предлагаем сделать первый легкий шаг, и ознакомиться с каталогом кухонных гарнитуров разной стилистики, предлагаемых компанией МебельСервис.</p>
+                <p
+                  class="stages__item-descr">Вы обязательно найдете кухню, от которой внутри Вас, кто-то сильно закричит «хочу!»</p>
+              </div>
+              <div class="stages__item">
+                <div class="stages__item-count"></div>
+                <h6 class="stages__item-title">ПОДРОБНАЯ КОНСУЛЬТАЦИЯ</h6>
+                <p class="stages__item-descr">Менеджер, который свяжется с Вами, проконсультирует Вас по всем первичным интересующим вопросам.</p>
+                <p class="stages__item-descr">После этой консультации Вы будете знать о кухонных гарнитурах от А до Я.</p>
+              </div>
+              <div class="stages__item">
+                <div class="stages__item-count"></div>
+                <h6 class="stages__item-title">Выезд дизайнера</h6>
+                <p class="stages__item-descr">В удобное для Вас время к Вам приедет один из дизайнеров. Вы покажете ему свой интерьер, расскажЕте пожелания, особенности, заполните анкету. Дизайнер снимет размеры помещения.</p>
+                <p class="stages__item-descr">Сделает фотографии помещения. Проконсультирует Вас по возникшим вопросам. Посоветует разные планировки и дизайн сразу же на месте. После этой встречи, Вы точно будете знать что хотите, в каком дизайне и каких размеров. Осталось это воплотить
+                  в 3-D визуализацию, что бы окончательно убедиться. А это следующий шаг…</p>
+              </div>
+            </div>
+            <div class="stages__more">
+              <button class="stages__more-btn btn btn_blue btn_lg" type="button">Смотреть полностью</button>
+            </div>
+          </div>
+        </section>
+        <!--end stages-->
+        <!--begin assort-->
+        <section class="assort">
+          <div class="assort__container container">
+            <div class="assort__inner">
+              <h2 class="assort__title title">МЫ ТАК ЖЕ ПРОИЗВОДИМ
+                <br>ЛЮБУЮ КОРПУСНУЮ МЕБЕЛЬ НА ЗАКАЗ</h2>
+              <div class="assort__row row">
+                <div class="assort__item">
+                  <div class="assort__item-img" style="background-image: url(img/content/assort-img_1.jpg)"></div>
+                  <span class="assort__item-label text-label text-label_white">мебель для прихожих</span>
+                  <button class="assort__item-btn btn btn_blue btn_lg" type="button">Посмотреть каталог</button>
+                </div>
+                <div class="assort__item">
+                  <div class="assort__item-img" style="background-image: url(img/content/assort-img_2.jpg)"></div>
+                  <span class="assort__item-label text-label text-label_white">Шкафы купе и гардеробные</span>
+                  <button class="assort__item-btn btn btn_blue btn_lg" type="button">Посмотреть каталог</button>
+                </div>
+                <div class="assort__item">
+                  <div class="assort__item-img" style="background-image: url(img/content/assort-img_3.jpg)"></div>
+                  <span class="assort__item-label text-label text-label_white">Детская мебель</span>
+                  <button class="assort__item-btn btn btn_blue btn_lg" type="button">Посмотреть каталог</button>
+                </div>
+                <div class="assort__item">
+                  <div class="assort__item-img" style="background-image: url(img/content/assort-img_3.jpg)"></div>
+                  <span class="assort__item-label text-label text-label_white">А также прочую мебель на заказ</span>
+                  <button class="assort__item-btn btn btn_blue btn_lg" type="button">Посмотреть каталог</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--end assort-->
+        <!--begin contact-->
+        <section class="contact">
+          <div class="contact__text-container container">
+            <h2 class="contact__title title">как нас найти ?</h2>
+            <h4 class="contact__sub-title title-md">Г. ЙОШКАР-ОЛА, УЛ. КАРЛА МАРКСА, 99, ТЦ «ФОРУМ», ЦОКОЛЬНЫЙ ЭТАЖ</h4>
+          </div>
+          <div class="contact__map-wrap">
+            <div class="contact__map-container container">
+              <div class="contact__block">
+                <div class="contact__block-img-wrap">
+                  <img src="img/content/contact-block_img.jpg" alt="image" title="" />
+                </div>
+                <div class="contact-block contact-block_default">
+                  <div class="contact-block__item">
+                    <div class="contact-block__item-icon-wrap">
+                      <div class="contact-block__item-icon contact-block__item-icon_tel"></div>
+                    </div>
+                    <div class="contact-block__item-data">
+                      <h6 class="contact-block__item-data-title">Телефон</h6>
+                      <a class="contact-block__item-text" href="tel:+78362398639">+7 (8362) 39 - 86 - 39</a>
+                    </div>
+                  </div>
+                  <div class="contact-block__item">
+                    <div class="contact-block__item-icon-wrap">
+                      <div class="contact-block__item-icon contact-block__item-icon_email"></div>
+                    </div>
+                    <div class="contact-block__item-data">
+                      <h6 class="contact-block__item-data-title">e-mail</h6>
+                      <a class="contact-block__item-text" href="mailto:mebelservis12@mail.ru">mebelservis12@mail.ru</a>
+                    </div>
+                  </div>
+                  <div class="contact-block__item">
+                    <div class="contact-block__item-icon-wrap">
+                      <div class="contact-block__item-icon contact-block__item-icon_clock"></div>
+                    </div>
+                    <div class="contact-block__item-data">
+                      <h6 class="contact-block__item-data-title">Режим работы</h6>
+                      <p class="contact-block__item-text">с 10:00 До 20:00, без выходных</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact__map" data-lat="56.628462" data-lng="47.894926" data-marker-lat="56.628460" data-marker-lng="47.897241" data-zoom="17"></div>
+          </div>
+          <div class="contact__ask">
+            <div class="contact__ask-container container">
+              <div class="contact__ask-inner">
+                <div class="contact__ask-row row">
+                  <div class="contact__ask-col">
+                    <h2 class="contact__ask-title title">Остались вопросы ?</h2>
+                    <p class="contact__descr">Мы с радостью на них ответим</p>
+                  </div>
+                  <div class="contact__ask-col">
+                    <a class="contact__more-btn btn btn_blue btn_lg" href="#!">Задать вопрос</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--end contact-->
+        <!--begin faq-->
+        <section class="faq" style="background-image: url(img/bg/stripes_bg.png)">
+          <div class="faq__container container">
+            <h2 class="faq__title title">часто задаваемые вопросы</h2>
+            <div class="faq__item">
+              <h5 class="faq__item-title">Кухни в Йошкар-Оле от МебельСервис - почувствуйте удовольствие от готовки на собственной кухне!</h5>
+              <p class="faq__item-descr">Приготовление новых блюд, тихие семейные вечера на новой кухне - наслаждайтесь вместе с кухней от “МебельСервис”. В основе нашей работы заложены определенные принципы: мы никогда не навязываем клиенту дополнительных услуг, не предлагаем
+                некачественные материалы, полностью погружаемся в желания и идеи заказчика. С нами вы сможете воплотить в жизнь самые необычные идеи! Клиенты любят нас за то, что мы открыты к ним:</p>
+              <ul class="faq__item-list">
+                <li>Держим цены от производителя. Купить кухонный гарнитур — затратное мероприятие даже для решений эконом-класса. Мы работаем без посредников, поэтому в «МебельСервис» можно купить кухню без наценок.</li>
+                <li>Предлагаем простые условия рассрочки. Покупка мебели в рассрочку (особенно если это кухня в Йошкар-Оле) часто связана с бумажной волокитой. Оформляем рассрочку без участия банка, без справок о доходах и даже без процентов.</li>
+                <li>Мы заботимся о клиентах, поэтому выкупаем старую кухню. Не продавайте и не выбрасывайте ваш гарнитур — при оформлении заказа на кухню мы возьмём старый гарнитур в зачёт нового.</li>
+                <li>Не экономим на качестве. Используем долговечные акриловые фасады и австрийскую фурнитуру Blum — продукцию лидирующего на рынке производителя.</li>
+                <li>Даём гарантию. Мы настолько уверены в качестве наших гарнитуров, что предоставляем 10-летнюю гарантию на все материалы и работу.</li>
+                <li>Мы не оставляем после себя мусора! Вы можете начинать пить чай уже через минуту после того, как мы покинем вашу кухню и оставим там новенький гарнитур!</li>
+              </ul>
+              <p class="faq__descr">Пользуйтесь надёжной кухонной мебелью с «МебельСервис» и наслаждайтесь вкусом любимых блюд!</p>
+            </div>
+            <div class="faq__item">
+              <h5 class="faq__item-title">Для тех, у кого остались вопросы по дизайну кухни</h5>
+              <p class="faq__item-descr">Продумаем дизайн интерьера кухни и поможем найти уютное и функциональное решение даже для непростых планировок:</p>
+              <ul class="faq__item-list">
+                <li>Хрущёвки и квартиры с маленькой кухней. Найдём компромисс между эстетикой и функциональностью и воплотим его в жизнь.</li>
+                <li>Квартиры-студии. Правильно зонируем квартиру.</li>
+                <li>Нестандартные планировки. Для маленьких пространств предлагаем создать дизайн угловой кухни — это отличное сочетание комфорта и функциональности.</li>
+                <li>Выезд дизайнера на замеры всегда бесплатный, даже если вам не понравится ни один из вариантов гарнитуров.</li>
+              </ul>
+            </div>
+            <div class="faq__item">
+              <h5 class="faq__item-title">Если остались вопросы по кухонным гарнитурам</h5>
+              <p class="faq__item-descr">В ассортименте — кухонные гарнитуры для маленькой кухни (угловые и обычные), решения для квартир-студий и домашних пространств любой планировки.</p>
+              <p class="faq__item-descr">Если вам не понравился ни один из представленных в каталоге гарнитуров - ничего страшного! Дизайнер приедет к вам, сделает замеры и подготовит варианты. Вы можете подъехать к нам в офис на бесплатном такси, и мы вместе выберем индивидуальный
+                дизайн кухни!</p>
+            </div>
+          </div>
+        </section>
+        <!--end faq-->
       </div>
       <!--+popup({name: 'call-popup'})-->
       <!--begin footer-->
       <footer class="footer">
-        <div class="footer__container container"></div>
+        <div class="footer__info">
+          <div class="footer__container container">
+            <div class="footer__info-col">
+              <h4 class="footer__info-title">КУХНИ</h4>
+              <ul class="footer__info-list">
+                <li>
+                  <a href="#!">Маленькие кухни / хрущевки</a>
+                </li>
+                <li>
+                  <a href="#!">Кухня гостиная / в студию</a>
+                </li>
+                <li>
+                  <a href="#!">Современные кухни</a>
+                </li>
+                <li>
+                  <a href="#!">Угловые кухни</a>
+                </li>
+                <li>
+                  <a href="#!">Стиль ЧУ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__info-col">
+              <h4 class="footer__info-title">БЕСПЛАТНО</h4>
+              <ul class="footer__info-list">
+                <li>
+                  <a href="#!">Пригласить дизайнера в гости</a>
+                </li>
+                <li>
+                  <a href="#!">Экспресс расчет в течение 15 минут</a>
+                </li>
+                <li>
+                  <a href="#!">Рассрочка 0%</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__info-col">
+              <h4 class="footer__info-title">АКЦИИ И СПЕЦПРЕДЛОЖЕНИЯ</h4>
+              <ul class="footer__info-list">
+                <li>
+                  <a href="#!">Бесплатное такси до МебельСервис</a>
+                </li>
+                <li>
+                  <a href="#!">Новая кухня в обмен на старую</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__container container">
+            <a class="logo footer__logo" href="#!">
+              <img src="img/other/logo.jpg" alt="img" title="" />
+            </a>
+            <div class="footer__copy">
+              <p class="footer__copy-text">ОГРН</p>
+              <p class="footer__copy-text">© mebelservice12.ru. Все права защищены.</p>
+            </div>
+            <blockquote class="footer__quote">"Тот кто сможет дать потребителю лучшее качество по наиболее низким ценам, непременно станет во главе индустрии"</blockquote>
+          </div>
+        </div>
       </footer>
       <!--end footer-->
     </body>

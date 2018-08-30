@@ -1,6 +1,8 @@
 import objectFitImages from 'object-fit-images';
 import 'jquery-mask-plugin';
 import './components/Sliders';
+import './components/CTabs';
+import './sections/Contact';
 // import './Popups';
 
 export class Common {

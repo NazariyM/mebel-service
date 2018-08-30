@@ -3,19 +3,44 @@
       display: block
       width: 198px
       height: 41px
-      
+
 .contact-block
+   $parent: &
    display: flex
-   justify-content: center
    align-items: center
-   padding: 0 20px
+   &_header
+      margin-left: 30px
+      flex: 1 1 auto
    &__item
       display: flex
-      flex: 0 1 33.33333%
+      #{$parent}_header &
+         flex: 1 1 auto
+         &:not(:last-child)
+            margin-right: 15px
+      #{$parent}_default &
+         align-items: center
+         flex: 0 1 auto
+         width: 100%
+         &:not(:last-child)
+            margin-bottom: 20px
+      &-data
+         &-title
+            +f('os700', 12, 18)
+            text-transform: uppercase
+   
       &-icon-wrap
-         flex: 0 0 25px
+         flex: 0 0 27px
          margin-right: 10px
          border-right: 1px solid rgba($color-1, .6)
+         #{$parent}_default &
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            height: 32px
+            flex: 0 0 30px
+            .contact-block__item-icon_tel
+               position: relative
+               left: 3px
       &-icon
          &_loc
             +sprite('loc')
@@ -23,30 +48,174 @@
             +sprite('tel')
          &_clock
             +sprite('clock')
+         &_email
+            +sprite('email')
       &-text
          font-size: 13px
          color: $color-4
+         #{$parent}_default &
+            font-size: 15px
+   &_default
+      padding: 0
+      flex-direction: column
 
 .get-video
-   width: 437px
-   padding: 20px 21px
+   width: 448px
+   padding: 22px 30px 27px
    box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.35)
    border: 10px solid #0057ae
-   background: $white
+   background: $white url("../img/other/grid-bg.png")
    z-index: 1
    &__top
-      margin-bottom: 10px
-      padding-bottom: 10px
-      border-bottom: 1px solid rgba($color-1, .5)
-      text-align: center
-   &__title
-      font-size: 22px
-   &__descr
       margin-bottom: 25px
+      padding-bottom: 30px
+      border-bottom: 1px solid rgba($color-1, .5)
+      &_mod
+         padding-bottom: 13px
+   &__title
+      margin-bottom: 15px
+      font-size: 22px
+      line-height: 32px
+      letter-spacing: 0.035em
+      text-align: left
+   &__descr
+      margin-bottom: 30px
       font-size: 15px
       line-height: 22px
+      letter-spacing: 0.035em
+      text-align: left
    &__img-wrap
       margin: 0 auto
       width: 302px
       height: 160px
       +cover-img
+   &__form-field
+      &:not(:last-child)
+         margin-bottom: 28px
+      label
+         +f('os800')
+         span
+            margin-bottom: 15px
+            letter-spacing: .075em
+   &__form-send
+      margin-top: 33px
+      .btn
+         margin-bottom: 15px
+
+.download-block
+   padding: 15px 23px
+   box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.35)
+   border: 10px solid #0057ae
+   background: $white
+   &__title
+      margin-bottom: 15px
+      line-height: 26.74px
+      font-size: 17px
+      text-transform: uppercase
+      letter-spacing: 0.03em
+      +f('os800')
+   
+   &__list
+      margin-bottom: 18px
+      padding-bottom: 18px
+      border-bottom: 1px solid rgba($color-1, .4)
+      li
+         position: relative
+         padding-left: 30px
+         font-size: 14px
+         line-height: 18px
+         &:first-child
+            margin-bottom: 15px!important
+            font-size: 17px
+            line-height: 21px
+         &:not(:last-child)
+            margin-bottom: 13px
+         &::before
+            position: absolute
+            top: 0
+            left: 0
+            content: ''
+         &:nth-child(1)::before
+            +sprite('list-numb-1')
+         &:nth-child(2)::before
+            +sprite('list-numb-2')
+         &:nth-child(3)::before
+            +sprite('list-numb-3')
+
+   &__social
+      margin-bottom: 18px
+      &-inner
+         display: flex
+      &-link
+         transition: .4s ease
+         
+         &:hover
+            opacity: .8
+         &:not(:last-child)
+            margin-right: 15px
+         &.icon-viber
+            +sprite('viber')
+         &.icon-whatsapp
+            +sprite('whatsapp')
+         &.icon-telegram
+            +sprite('telegram')
+         &.icon-facebook
+            +sprite('facebook')
+         &.icon-tel-btn
+            +sprite('tel-btn')
+   &__sub-title
+      margin-bottom: 5px
+      +f('os800')
+      font-size: 15px
+      text-transform: uppercase
+   &__form-field
+      input
+         height: 42px
+         line-height: 42px
+         font-size: 14px
+   &__form-send
+      margin-top: 25px
+      p
+         margin: 0 -8px
+         font-size: 10px
+         line-height: 12px
+         color: #7f7f7f
+
+.view-block
+   position: relative
+   +clr
+   &__img
+      float: left
+      padding-right: 20px
+      width: percentage(687 / 1066)
+      .slick-list
+      &-item
+         padding-left: 4px
+         background: #fff
+      &-wrap
+         +ratio(661, 459)
+         +cover-img
+         img
+            +coverdiv
+            width: 100%
+            height: 100%
+      &-label
+         bottom: 40px
+   &__nav
+      float: left
+      width: percentage(378 / 1066)
+      .slick-list
+         margin: 0 -10px
+      &-item
+         width: calc(50% - 20px)!important
+         margin: 0 10px
+         +cover-img
+         cursor: pointer
+         +ratio(179, 140)
+         &:nth-child(2) ~ &
+            margin-top: 18px
+         img
+            +coverdiv
+            width: 100%
+            height: 100%
+            

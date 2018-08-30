@@ -1,0 +1,44 @@
+.c-tabs
+	$parent: &
+	&__nav
+		position: relative
+		display: flex
+		justify-content: center
+		z-index: 1
+		margin-bottom: 38px
+		+sm
+			flex-direction: column
+			align-items: center
+	
+	&__for
+		position: relative
+	&__btn
+		flex: 1 1 auto
+		text-align: center
+		padding: 15px 10px 18px
+		cursor: pointer
+		background-color: $white
+		border-top: 1px solid $color-1
+		border-bottom: 1px solid $color-1
+		+f('os600', 16, 16)
+		color: $color-1
+		+trs
+		
+		&.is-active
+			pointer-events: none
+			background-color: $color-1
+			border-color: transparent
+			color: #fff
+		&.is-disabled
+			pointer-events: none
+			opacity: 0.5
+			background-color: $white
+		
+		&:not(:last-child)
+			border-right: 1px solid $color-1
+	
+	&__tab
+		display: none
+		
+		&:first-child
+			display: block

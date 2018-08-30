@@ -72,9 +72,11 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.3.5",
     "babel-polyfill": "^6.26.0",
+    "gsap": "^2.0.2",
     "jquery-mask-plugin": "^1.14.15",
     "npm": "^6.4.0",
     "object-fit-images": "^3.2.3",
+    "promise-polyfill": "^8.1.0",
     "slick-carousel": "^1.8.1",
     "svgxuse": "^1.2.6",
     "vintage-popup": "^0.1.10"

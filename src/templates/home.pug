@@ -6,59 +6,90 @@ block variables
 block content
 
 	+b.main
+
 		//begin screen
-		//+b.SECTION.screen
-		//	+e.inner
-				+e.slider
+		+b.SECTION.screen
+			+e.bg(style='background-image: url(img/bg/screen_bg.jpg)')
+			+e.container.container
+				+e.H2.title ПРОИЗВОДСТВО КУХОНЬ №1 в г.ЙОШКАР-ОЛА от 10 ДНЕЙ С ГАРАНТИЕЙ до 5 ЛЕТ
+				+b.download-block.screen__download-block
+					+e.H3.title Скачайте подборку материалов - бесплатно!
+					+e.UL.list
+						li 5 трендов дизайна кухонных гарнитуров в 2018г.
+						li Все об материалах для Кухни.
+							br
+							| На чем можно экономить, на чем категорически нельзя.
+						li Каталог наших лучших работ
+							br
+							| 2008-2018 г. с описанием и ценами.
+					+e.social
+						+e.H5.sub-title КУДА ОТПРАВИТЬ ?
+						+e.social-inner
+							+e.A.social-link.icon-viber(href='#!')
+							+e.A.social-link.icon-whatsapp(href='#!')
+							+e.A.social-link.icon-telegram(href='#!')
+							+e.A.social-link.icon-facebook(href='#!')
+							+e.A.social-link.icon-tel-btn(href='#!')
+
+					+e.FORM.form(action='#!' method='POST')
+						+e.H5.sub-title На какой номер отправить ?
+						+b.form-field.download-block__form-field
+							+e.INPUT.input.js-tel-input(type='text' name='' placeholder='+7(---) --- -- --' required)
+						+b.form-send.download-block__form-send
+							+e.INPUT.btn.btn._blue._md(type='submit' value='Получить бесплатно')
+							+e.P.text Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"
+
 		//end screen
 
 		//begin benefits
 		+b.SECTION.benefits
 			+e.container.container
-				+e.H2.title.title Преимущества работы с нами
-				+e.row.row
-					-
-						benefitsList = [{
-							title: 'ЛУЧШИЕ ЦЕНЫ НА РЫНке',
-							descr: 'Производим от Премиум до Эконом класса. Без наценки магазина, напрямую с производства. Сэкономь до 20% от рыночных цен.'
-						}, {
-							title: 'Наивысшее качество',
-							descr: 'Средний стаж каждого сотрудника компании «МебельСервис», более 10 лет в индустрии мебели. Все сотрудники получают оплату, только после 100% сдачи заказа.'
-						}, {
-							descr: 'Без участия банка,  без справок, оформление по одному документу. Возможно оформление кредита, через банк, сроком до 3-х лет.'
-						}, {
-							title: 'ОПЛАТА ЛЮБЫМ УДОБНЫМ СПОСОБОМ',
-							descr: 'Наличный расчет, банковская карта, оплата на расчетный счет компании при работе с юр. лицами.'
-						}, {
-							title: 'ТЕХНИКА В ПОДАРОК',
-							descr: 'При покупке кухни, Вœœœы получаете технику в подарок.'
-						}, {
-							title: '10 лет гарантии от производителя',
-							descr: 'Послегарантийное обслуживание, прописывается в договоре.'
-						}]
+				+e.block
+					+e.H2.title.title Преимущества работы с нами
+					+e.row.row
+						-
+							benefitsList = [{
+								title: 'ЛУЧШИЕ ЦЕНЫ НА РЫНке',
+								descr: 'Производим от Премиум до Эконом класса. Без наценки магазина, напрямую с производства. Сэкономь до 20% от рыночных цен.'
+							}, {
+								title: 'Наивысшее качество',
+								descr: 'Средний стаж каждого сотрудника компании «МебельСервис», более 10 лет в индустрии мебели. Все сотрудники получают оплату, только после 100% сдачи заказа.'
+							}, {
+								descrClass: '_mod',
+								descr: 'Без участия банка,  без справок, оформление по одному документу. Возможно оформление кредита, через банк, сроком до 3-х лет.'
+							}, {
+								title: 'ОПЛАТА ЛЮБЫМ УДОБНЫМ СПОСОБОМ',
+								descr: 'Наличный расчет, банковская карта, оплата на расчетный счет компании при работе с юр. лицами.'
+							}, {
+								title: 'ТЕХНИКА В ПОДАРОК',
+								descr: 'При покупке кухни, Вы получаете технику в подарок.'
+							}, {
+								title: '10 лет гарантии от производителя',
+								descr: 'Послегарантийное обслуживание, прописывается в договоре.'
+							}]
 
-					mixin benefitsItem(item, i)
-						+e.item
-							+e.item-icon-wrap
-								+e.item-icon(class=`_${i + 1}`)
-							if i === 2
-								+e.H5.item-title РАссрочка
-									span 0%
-									= ' '
-									| на 6 месяцев
-							else
-								+e.H5.item-title= item.title
+						mixin benefitsItem(item, i)
+							+e.item
+								+e.item-icon-wrap
+									+e.item-icon(class=`_${i + 1}`)
+								if i === 2
+									+e.H5.item-title РАссрочка
+										span 0%
+										= ' '
+										| на 6 месяцев
+								else
+									+e.H5.item-title= item.title
 
-							+e.P.item-descr= item.descr
+								+e.P.item-descr(class= item.descrClass || '')= item.descr
 
-					each item, i in benefitsList
-						+benefitsItem(item, i)
+						each item, i in benefitsList
+							+benefitsItem(item, i)
 
-				+e.A.more-btn.btn._blue._lg(href='#!') Узнать подробнее
+					+e.A.more-btn.btn._blue._lg(href='#!') Узнать подробнее
 		//end benefits
 
 		//begin team-poster
-		+b.SECTION.team-poster
+		+b.SECTION.team-poster(style='background-image: url(img/bg/stripes_bg.png)')
 			+e.container.container
 				+e.block
 					+e.top-text
@@ -99,7 +130,11 @@ block content
 		+b.SECTION.request(style='background-image: url(img/bg/request_bg.png)')
 			+e.container.container
 				+e.FORM.form(action='#!' method='POST')
-					+e.H3.form-title.title ОСТАВЬТЕ ЗАЯВКУ НА БЕСПЛАТНОЕ ТАКСИ ДО «МЕБЕЛЬсервис»
+					+e.H3.form-title.title ОСТАВЬТЕ ЗАЯВКУ
+						br
+						| НА БЕСПЛАТНОЕ ТАКСИ
+						br
+						| ДО «МЕБЕЛЬсервис»
 					+b.form-field.request__form-field
 						+e.LABEL.label
 							span Ваше Имя
@@ -109,7 +144,7 @@ block content
 							span Ваш номер телефона
 							+e.INPUT.input.js-tel-input(type='text' name='' placeholder='+7 (---) --- -- --' required)
 					+b.form-send.request__form-send
-						+e.INPUT.btn.btn._blue._lg(type='submit' value='Получить видео')
+						+e.INPUT.btn.btn._blue._lg(type='submit' value='Отправить заявку')
 						+e.P.text Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"
 		//end request
 
@@ -145,9 +180,10 @@ block content
 										span желаемый ежемесячный платеж
 										+e.INPUT.input(type='text' name='' placeholder='Например: 10.000' required)
 						+b.form-send.anket__form-send
-							+e.INPUT.btn.btn._blue._lg(type='submit' value='Получить видео')
+							+e.INPUT.btn.btn._blue._lg(type='submit' value='Рассчитать')
 							+e.P.text Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"
 
+				+e.container-border
 			+e.bg._l(style='background-image: url(img/bg/anket_bg_l.png)')
 			+e.bg._r(style='background-image: url(img/bg/anket_bg_r.png)')
 		//end anket
@@ -169,11 +205,13 @@ block content
 								li Получи ссылку
 								li Изучай каталог
 								li Смотри видео
-						iframe(width='560' height='315' src='https://www.youtube.com/embed/r5SeqDeSsGY?rel=0&controls=0&showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen='')
+						iframe(src='https://www.youtube.com/embed/r5SeqDeSsGY?rel=0&controls=0&showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen='')
 				+b.get-video.promo__get-video
 					+e.top
 						+e.H4.title.title-md скачайте каталог + видео
-						+e.P.descr Начните выбор кухонного гарнитура, не выходя из дома, получив бесплатный каталог.
+						+e.P.descr Начните выбор кухонного гарнитура, не
+							br
+							| выходя из дома, получив бесплатный каталог.
 						+e.img-wrap
 							+e.IMG(src='img/content/journal_img.png' alt='image')
 					+e.FORM.form(action='#!' method='POST')
@@ -181,7 +219,343 @@ block content
 							+e.LABEL.label
 								span Ваш номер телефона
 								+e.INPUT.input.js-tel-input(type='text' name='' placeholder='+7(---) --- -- --' required)
-						+b.form-send.promo__form-send
+						+b.form-send.get-video__form-send
 							+e.INPUT.btn.btn._blue._lg(type='submit' value='Получить видео')
 							+e.P.text Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"
 		//end promo
+			
+		//begin view-catalog
+		+b.SECTION.view-catalog
+			+e.container.container
+				+e.block
+					+e.H2.title.title НАЙДИТЕ ПОДХОДЯЩИЙ КУХОННЫЙ ГАРНИТУР ПО СВОЕЙ ПЛАНИРОВКЕ
+					+e.slider
+						+e.slider-item
+							+b.view-block
+								+e.img
+									-i = 0
+									while i < 6
+										+e.img-item
+											+e.img-wrap
+												+e.IMG(src='img/content/view-block_img.jpg' alt='image')
+												+e.SPAN.img-label.text-label._blue ул. Людникова 154
+										-i++
+								+e.nav
+									-i = 0
+									while i < 6
+										+e.nav-item
+											+e.IMG(src='img/content/view-block_img-sm.jpg' alt='image')
+										-i++
+						+e.slider-item
+							+b.view-block
+								+e.img
+									-i = 0
+									while i < 6
+										+e.img-item
+											+e.img-wrap
+												+e.IMG(src='img/content/view-block_img.jpg' alt='image')
+												+e.SPAN.img-label.text-label._blue ул. Людникова 154
+										-i++
+								+e.nav
+									-i = 0
+									while i < 6
+										+e.nav-item
+											+e.IMG(src='img/content/view-block_img-sm.jpg' alt='image')
+										-i++
+
+						+e.slider-item
+							+b.view-block
+								+e.img
+									-i = 0
+									while i < 6
+										+e.img-item
+											+e.img-wrap
+												+e.IMG(src='img/content/view-block_img.jpg' alt='image')
+												+e.SPAN.img-label.text-label._blue ул. Людникова 154
+										-i++
+								+e.nav
+									-i = 0
+									while i < 6
+										+e.nav-item
+											+e.IMG(src='img/content/view-block_img-sm.jpg' alt='image')
+										-i++
+
+					+e.more
+						+e.A.more-btn.btn._blue._lg(href='#!') Посмотреть каталог
+		//end view-catalog
+			
+		//begin testimonials
+		+b.SECTION.testimonials(style='background-image: url(img/bg/stripes_bg.png)')
+			+e.container.container
+				+e.top
+					+e.H2.title.title анкеты - отзывы
+					+e.H4.sub-title.title-md которые заполняет каждый клиент после установки кухни
+				+e.slider.slider-default.slider-btn-default
+					+e.item
+						+e.item-text
+							+e.item-text-top
+								+e.item-title Белобородова а. Д.
+								+e.P.item-descr Заказывали в компании «МебельСервис»
+								+e.item-name Кухонный гарнитур
+							+e.item-text-bot
+								+e.item-sub-title ОТЗЫВ
+								+e.P.item-descr Выражаю благодарность за качественную сборку и подробную консультацию по выбору кухонного гарнитура.
+								+e.item-date 04.05.2018г.
+
+						+e.item-img-wrap
+							+e.IMG(src='img/content/testimonials_img.png' alt='image')
+					+e.item
+						+e.item-text
+							+e.item-text-top
+								+e.item-title Белобородова а. Д.
+								+e.P.item-descr Заказывали в компании «МебельСервис»
+								+e.item-name Кухонный гарнитур
+							+e.item-text-bot
+								+e.item-sub-title ОТЗЫВ
+								+e.P.item-descr Выражаю благодарность за качественную сборку и подробную консультацию по выбору кухонного гарнитура.
+								+e.item-date 04.05.2018г.
+
+						+e.item-img-wrap
+							+e.IMG(src='img/content/testimonials_img.png' alt='image')
+
+				+e.action
+					+e.A.action-btn.btn._blue._lg(href='#!') Оставить отзыв
+					+e.P.action-descr Отзыв попадает лично Директору
+		//end testimonials
+
+		//begin promo
+		+b.SECTION.promo._mod
+			+e.container.container
+				+e.video-block
+					+e.top-text._mod
+						+e.H2.title.title ДАРИМ СКИДКУ -20% НА ЗАМЕРЕ
+					+e.P.descr Посмотрите видео и узнайте, 4 главных критерия выбора кухонного гарнитура и что будет после просмотра каталога?
+					+e.video-wrap._lg
+						iframe(src='https://www.youtube.com/embed/r5SeqDeSsGY?rel=0&controls=0&showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen='')
+				+b.get-video.promo__get-video
+					+e.top._mod
+						+e.H4.title.title-md ЗАПИШИТЕСЬ НА ЗАМЕР
+							br
+							| И ПОЛУЧИТЕ ПОДАРОК
+							br
+							| ОТ ДИЗАЙНЕРА
+					+e.FORM.form(action='#!' method='POST')
+						+b.form-field.get-video__form-field
+							+e.LABEL.label
+								span Ваш номер телефона
+								+e.INPUT.input.js-tel-input(type='text' name='' placeholder='+7(---) --- -- --' required)
+						+b.form-field.get-video__form-field
+							+e.LABEL.label
+								span введите адрес
+								+e.INPUT.input(type='text' name='' placeholder='ул. Пушкинская 123, д 23, кв. 65' required)
+						+b.form-field.get-video__form-field
+							+e.LABEL.label
+								span удобное время принять дизайнера
+								+e.INPUT.input(type='text' name='' placeholder='27 июля с 17:00 до 18:00' required)
+						+b.form-send.get-video__form-send
+							+e.INPUT.btn.btn._blue._lg(type='submit' value='Получить видео')
+							+e.P.text Ваши данные будут использованы только для связи с Вами на основании ФЗ РФ №152"О персональных данных"
+		//end promo
+
+		//begin teaser
+		+b.SECTION.teaser
+			+e.container.container
+				+e.block
+					+e.H2.title.title наши гарнитуры
+
+					.c-tabs.teaser__tabs
+						.c-tabs__nav
+							-
+								tabsList = ['Маленькие кухни / хрущевки', 'Кухня гостинная / в студию', 'Современные кухни', 'Угловые кухни', 'Стиль ЧУ']
+							-activeIndex = 0
+							for tabsText, index in tabsList
+								button.c-tabs__btn(class= index === activeIndex ? 'is-active' : '' type='button')= tabsText
+						.c-tabs__for
+							-i= 0
+							while i < 5
+								.c-tabs__tab
+									+e.slider.slider-default
+										+e.slider-img
+											+e.IMG(src='img/content/teaser_img.jpg' alt='image')
+										+e.slider-img
+											+e.IMG(src='img/content/teaser_img.jpg' alt='image')
+										+e.slider-img
+											+e.IMG(src='img/content/teaser_img.jpg' alt='image')
+									+e.btn-wrap
+										+e.A.btn.btn._blue._lg(href='#!') Рассчитать кухню
+									+e.row.row
+										+e.item
+											+e.item-icon-wrap
+												+e.item-icon._pantone
+											+e.H6.item-title Более 1000 цветовых решений
+											+e.P.item-descr Изготовим гарнитур любого оттенка и стиля
+										+e.item
+											+e.item-icon-wrap
+												+e.item-icon._factory
+											+e.H6.item-title ФАБРИЧНОЕ ПРОИЗВОДСТВО ФАСАДОВ
+											+e.P.item-descr Закупаем фасады в России и Италии
+										+e.item
+											+e.item-icon-wrap
+												+e.item-icon._drop
+											+e.H6.item-title КОРПУС КУХНИ ИЗ ЛДСП
+											+e.P.item-descr Создаем каркас гарнитура из влагостойкого материала
+										+e.item
+											+e.item-icon-wrap
+												+e.item-icon._home
+											+e.H6.item-title АВСТРИЙКАЯ  ФУРНИТУРА BLUM
+											+e.P.item-descr Используем долговечные и надёжные комплектующие
+										+e.item
+											+e.item-icon-wrap
+												+e.item-icon._truck
+											+e.H6.item-title БЕСПЛАТНАЯ ДОСТАВКА
+											+e.P.item-descr Доставим кухню в любую точку Удмурдии
+										+e.item
+											+e.item-icon-wrap
+												+e.item-icon._kitchen-sm
+											+e.H6.item-title ПРОИЗВОДИМ ГАРНИТУРЫ «ПОД КЛЮЧ»
+											+e.P.item-descr Вы получаете кухню, полностью введенную в эксплуатацию
+									-i++
+
+		//end teaser
+
+		//begin express
+		+b.SECTION.express.section-lines
+			+e.container.container
+				+e.block
+					+e.block-text
+						+e.H2.title.title экспресс расчет
+							br
+							| в течении 15 минут
+						+e.P.descr Если вы уже заказывали эскиз кухонного гарнитура в другом месте, отправьте нам чертежи с размерами, мы сделаем экспресс расчет за 15 мин с Более выгодным предложением
+						+e.BUTTON.btn.btn._blue._lg(type='button') Получить экспресс расчет
+					+e.block-img(style='background-image: url(img/content/express_img.jpg)')
+		//end express
+
+		//begin stages
+		+b.SECTION.stages(style='background-image: url(img/bg/stripes_bg.png)')
+			+e.container.container
+				+e.top
+					+e.H2.title.title ЧТО ДЕЛАЕТ КОМАНДА «МЕБЕЛЬ СЕРВИС»
+					+e.H4.sub-title.title-md ДЛЯ ТОГО ЧТОБЫ ВЫ ПОЛУЧИЛИ НАИВЫСШЕЕ КАЧЕСТВО И ЧУВСТВО ВОСТОРГА ОТ ВАШЕЙ КУХНИ
+				+e.row.row
+					+e.item
+						+e.item-count
+						+e.H6.item-title каталог кухонных гарнитуров
+						+e.P.item-descr Мы предполагаем, что принципиальный интерес к выбору кухонного гарнитура у Вас есть, поэтому предлагаем сделать первый легкий шаг, и ознакомиться с каталогом кухонных гарнитуров разной стилистики, предлагаемых компанией МебельСервис.
+						+e.P.item-descr Вы обязательно найдете кухню, от которой внутри Вас, кто-то сильно закричит «хочу!»
+					+e.item
+						+e.item-count
+						+e.H6.item-title ПОДРОБНАЯ КОНСУЛЬТАЦИЯ
+						+e.P.item-descr Менеджер, который свяжется с Вами, проконсультирует Вас по всем первичным интересующим вопросам.
+						+e.P.item-descr После этой консультации  Вы будете знать о кухонных гарнитурах от А до Я.
+					+e.item
+						+e.item-count
+						+e.H6.item-title Выезд дизайнера
+						+e.P.item-descr В удобное для Вас время к Вам приедет один из дизайнеров. Вы покажете ему свой интерьер, расскажЕте пожелания, особенности, заполните анкету. Дизайнер снимет размеры помещения.
+						+e.P.item-descr Сделает фотографии помещения. Проконсультирует Вас по возникшим вопросам. Посоветует разные планировки и дизайн сразу же на месте. После этой встречи, Вы точно будете знать что хотите, в каком дизайне и каких размеров. Осталось это воплотить в 3-D визуализацию, что бы окончательно убедиться. А это следующий шаг…
+				+e.more
+					+e.BUTTON.more-btn.btn._blue._lg(type='button') Смотреть полностью
+		//end stages
+
+		//begin assort
+		+b.SECTION.assort
+			+e.container.container
+				+e.inner
+					+e.H2.title.title МЫ ТАК ЖЕ ПРОИЗВОДИМ
+						br
+						| ЛЮБУЮ КОРПУСНУЮ МЕБЕЛЬ НА ЗАКАЗ
+					+e.row.row
+						+e.item
+							+e.item-img(style='background-image: url(img/content/assort-img_1.jpg)')
+							+e.SPAN.item-label.text-label._white мебель для прихожих
+							+e.BUTTON.item-btn.btn._blue._lg(type='button') Посмотреть каталог
+
+						+e.item
+							+e.item-img(style='background-image: url(img/content/assort-img_2.jpg)')
+							+e.SPAN.item-label.text-label._white Шкафы купе и гардеробные
+							+e.BUTTON.item-btn.btn._blue._lg(type='button') Посмотреть каталог
+
+						+e.item
+							+e.item-img(style='background-image: url(img/content/assort-img_3.jpg)')
+							+e.SPAN.item-label.text-label._white Детская мебель
+							+e.BUTTON.item-btn.btn._blue._lg(type='button') Посмотреть каталог
+
+						+e.item
+							+e.item-img(style='background-image: url(img/content/assort-img_3.jpg)')
+							+e.SPAN.item-label.text-label._white А также прочую мебель на заказ
+							+e.BUTTON.item-btn.btn._blue._lg(type='button') Посмотреть каталог
+		//end assort
+
+		//begin contact
+		+b.SECTION.contact
+			+e.text-container.container
+				+e.H2.title.title как нас найти ?
+				+e.H4.sub-title.title-md Г. ЙОШКАР-ОЛА, УЛ. КАРЛА МАРКСА, 99, ТЦ «ФОРУМ», ЦОКОЛЬНЫЙ ЭТАЖ
+			+e.map-wrap
+				+e.map-container.container
+					+e.block
+						+e.block-img-wrap
+							+e.IMG(src='img/content/contact-block_img.jpg' alt='image')
+						+b.contact-block._default
+							+e.item
+								+e.item-icon-wrap
+									+e.item-icon._tel
+								+e.item-data
+									+e.H6.item-data-title Телефон
+									+e.A.item-text(href='tel:+78362398639') +7 (8362) 39 - 86 - 39
+
+							+e.item
+								+e.item-icon-wrap
+									+e.item-icon._email
+								+e.item-data
+									+e.H6.item-data-title e-mail
+									+e.A.item-text(href='mailto:mebelservis12@mail.ru') mebelservis12@mail.ru
+
+							+e.item
+								+e.item-icon-wrap
+									+e.item-icon._clock
+								+e.item-data
+									+e.H6.item-data-title Режим работы
+									+e.P.item-text с 10:00 До 20:00, без выходных
+
+				+e.map(data-lat='56.628462' data-lng='47.894926' data-marker-lat='56.628460' data-marker-lng='47.897241'  data-zoom='17')
+
+			+e.ask
+				+e.ask-container.container
+					+e.ask-inner
+						+e.ask-row.row
+							+e.ask-col
+								+e.H2.ask-title.title Остались вопросы ?
+								+e.P.descr Мы с радостью на них ответим
+							+e.ask-col
+								+e.A.more-btn.btn._blue._lg(href='#!') Задать вопрос
+		//end contact
+
+		//begin faq
+		+b.SECTION.faq(style='background-image: url(img/bg/stripes_bg.png)')
+			+e.container.container
+				+e.H2.title.title часто задаваемые вопросы
+				+e.item
+					+e.H5.item-title Кухни в Йошкар-Оле от МебельСервис - почувствуйте удовольствие от готовки на собственной кухне!
+					+e.P.item-descr Приготовление новых блюд, тихие семейные вечера на новой кухне - наслаждайтесь вместе с кухней от “МебельСервис”. В основе нашей работы заложены определенные принципы: мы никогда не навязываем клиенту дополнительных услуг, не предлагаем некачественные материалы, полностью погружаемся в желания и идеи заказчика. С нами вы сможете воплотить в жизнь самые необычные идеи! Клиенты любят нас за то, что мы открыты к ним:
+					+e.UL.item-list
+						li Держим цены от производителя. Купить кухонный гарнитур — затратное мероприятие даже для решений эконом-класса. Мы работаем без посредников, поэтому в «МебельСервис» можно купить кухню без наценок.
+						li Предлагаем простые условия рассрочки. Покупка мебели в рассрочку (особенно если это кухня в Йошкар-Оле) часто связана с бумажной волокитой. Оформляем рассрочку без участия банка, без справок о доходах и даже без процентов.
+						li Мы заботимся о клиентах, поэтому выкупаем старую кухню. Не продавайте и не выбрасывайте ваш гарнитур — при оформлении заказа на кухню мы возьмём старый гарнитур в зачёт нового.
+						li Не экономим на качестве. Используем долговечные акриловые фасады и австрийскую фурнитуру Blum — продукцию лидирующего на рынке производителя.
+						li Даём гарантию. Мы настолько уверены в качестве наших гарнитуров, что предоставляем 10-летнюю гарантию на все материалы и работу.
+						li Мы не оставляем после себя мусора! Вы можете начинать пить чай уже через минуту после того, как мы покинем вашу кухню и оставим там новенький гарнитур!
+					+e.P.descr Пользуйтесь надёжной кухонной мебелью с «МебельСервис» и наслаждайтесь вкусом любимых блюд!
+				+e.item
+					+e.H5.item-title Для тех, у кого остались вопросы по дизайну кухни
+					+e.P.item-descr Продумаем дизайн интерьера кухни и поможем найти уютное и функциональное решение даже для непростых планировок:
+					+e.UL.item-list
+						li Хрущёвки и квартиры с маленькой кухней. Найдём компромисс между эстетикой и функциональностью и воплотим его в жизнь.
+						li Квартиры-студии. Правильно зонируем квартиру.
+						li Нестандартные планировки. Для маленьких пространств предлагаем создать дизайн угловой кухни — это отличное сочетание комфорта и функциональности.
+						li Выезд дизайнера на замеры всегда бесплатный, даже если вам не понравится ни один из вариантов гарнитуров.
+				+e.item
+					+e.H5.item-title Если остались вопросы по кухонным гарнитурам
+					+e.P.item-descr В ассортименте — кухонные гарнитуры для маленькой кухни (угловые и обычные), решения для квартир-студий и домашних пространств любой планировки.
+					+e.P.item-descr Если вам не понравился ни один из представленных в каталоге гарнитуров - ничего страшного! Дизайнер приедет к вам, сделает замеры и подготовит варианты. Вы можете подъехать к нам в офис на бесплатном такси, и мы вместе выберем индивидуальный дизайн кухни!
+		//end faq

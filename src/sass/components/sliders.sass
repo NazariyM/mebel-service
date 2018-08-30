@@ -1,2 +1,59 @@
 .slider-btn
+   position: absolute
+   top: 50%
+   z-index: 1
+   margin-top: -25px
+   width: 50px
+   height: 50px
+   border-radius: 50%
+   &::before
+      border: 2px solid $color-1
+      border-radius: 50%
+      width: 100%
+      height: 100%
+      +vcenter
+      transition: .3s ease
+      content: ''
+   &::after
+      height: 140px
+      width: 60px
+      z-index: -1
+      +vcenter
+      background: #fff
+      content: ''
+   &.slick-disabled
+      &::before
+         border-color: rgba(#7f7f7f, .4)
+      svg
+         stroke: #bababa
+   svg
+      position: relative
+      top: 1px
+      font-size: 22px
+      stroke: $color-1
+      stroke-width: 7px
+      transition: .3s ease
+   &_prev
+      left: 0
+      svg
+         left: -2px
+   &_next
+      right: 0
+      svg
+         right: -2px
+         
+.slider-btn-default
+   .slider-btn
+      &:hover
+         svg
+            stroke: $color-1
+         &::before
+            border-color: $color-1
+      svg
+         stroke: #bababa
+      &::before
+         border-color: rgba(127,127,127,.4)
+      &::after
+         display: none
+      
 .slider-dots
